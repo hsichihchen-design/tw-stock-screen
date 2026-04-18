@@ -215,8 +215,9 @@ def main():
             failed_count += 1
             continue
             
+    tw_time = datetime.utcnow() + timedelta(hours=8)
     output = {
-        'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'last_updated': tw_time.strftime('%Y-%m-%d %H:%M:%S'), # 👈 確保這裡是寫入 tw_time
         'total_segments_found': len(all_results),
         'results': all_results
     }
