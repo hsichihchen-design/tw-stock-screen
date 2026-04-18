@@ -124,8 +124,8 @@ def check_ma_trend(df):
     half_year_ago = datetime.now() - timedelta(days=180)
     recent_df = temp_df[temp_df.index >= half_year_ago].dropna()
     
-    if len(recent_df) < 60: 
-        return False
+    #if len(recent_df) < 60: 
+    #    return False
         
     # ==========================================
     # 條件 2：跌破季線 (MA60) 的容忍度控管
@@ -236,9 +236,9 @@ def main():
                 continue
                 
             # 【第 1 關】：宏觀趨勢過濾
-            #if not check_ma_trend(clean_df):
-            #    filtered_out_by_ma += 1
-            #    continue
+            if not check_ma_trend(clean_df):
+                filtered_out_by_ma += 1
+                continue
                 
             # 【第 2 關】：微觀波段識別
             segments = identify_uptrend(clean_df, symbol)
