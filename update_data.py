@@ -133,7 +133,7 @@ def check_ma_trend(df):
     # 計算半年內，最低價低於 MA60 的天數
     days_below_ma60 = (recent_df['Low'] < recent_df['MA60']).sum()
     
-    if days_below_ma60 > 36:
+    if days_below_ma60 > 60:
         return False  # 👈 跌破超過 36 根 K 棒，視為防線崩潰，直接淘汰
         
     # ==========================================
