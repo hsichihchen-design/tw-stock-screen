@@ -106,7 +106,7 @@ if symbol_list:
             if not plot_df.empty:
                 # 建立子圖
                 fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
-                                    row_heights=[0.8, 0.2], vertical_spacing=0.03)
+                                    row_heights=[0.7, 0.3], vertical_spacing=0.03)
                 
                 # 1. K線 (實心、台股配色)
                 fig.add_trace(go.Candlestick(
@@ -114,6 +114,7 @@ if symbol_list:
                     low=plot_df['Low'], close=plot_df['Close'],
                     increasing_line_color='#ef5350', decreasing_line_color='#26a69a', 
                     increasing_fillcolor='#ef5350', decreasing_fillcolor='#26a69a',
+                    increasing_line_width=1, decreasing_line_width=1,
                     name='K線'
                 ), row=1, col=1)
                 
