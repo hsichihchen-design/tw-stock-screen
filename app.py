@@ -104,7 +104,7 @@ if symbol_list:
             df['MA60'] = df['Close'].rolling(window=60).mean()
             
             # 切片
-            plot_df = df.loc[df.index >= half_year_ago]
+            plot_df = df.loc[df.index >= (end_date - timedelta(days=120))]
             
             if not plot_df.empty:
                 # 建立子圖
@@ -115,16 +115,16 @@ if symbol_list:
                 fig.add_trace(go.Candlestick(
                     x=plot_df.index, open=plot_df['Open'], high=plot_df['High'], 
                     low=plot_df['Low'], close=plot_df['Close'],
-                    increasing_line_color='#ef5350', decreasing_line_color='#26a69a', 
-                    increasing_fillcolor='#ef5350', decreasing_fillcolor='#26a69a',
-                    increasing_line_width=1.2, decreasing_line_width=1.2, # 👈 關鍵修正 1：加重影線像素
+                    increasing_line_color='#E32636', decreasing_line_color='#008F39', # 👈 換成更高對比、更銳利的紅綠色
+                    increasing_fillcolor='#E32636', decreasing_fillcolor='#008F39',
+                    increasing_line_width=1, decreasing_line_width=1,                 # 👈 絕對整數 1，徹底消除反鋸齒的模糊邊緣
                     name='K線'
                 ), row=1, col=1)
                 
                 # 2. 均線 (把均線稍微調細一點點為 1.2，不要搶走 K 棒的風采)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA10'], line=dict(color='#f6c23e', width=1.2), name='10MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA20'], line=dict(color='#8e44ad', width=1.2), name='20MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA60'], line=dict(color='#36b9cc', width=1.2), name='60MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA10'], line=dict(color='#f6c23e', width=1), name='10MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA20'], line=dict(color='#8e44ad', width=1), name='20MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA60'], line=dict(color='#36b9cc', width=1), name='60MA'), row=1, col=1)
                 
                 # 3. 成交量
                 v_colors = ['#ef5350' if c >= o else '#26a69a' for c, o in zip(plot_df['Close'], plot_df['Open'])]
