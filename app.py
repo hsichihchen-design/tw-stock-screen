@@ -114,7 +114,7 @@ if symbol_list:
                     low=plot_df['Low'], close=plot_df['Close'],
                     increasing_line_color='#ef5350', decreasing_line_color='#26a69a', 
                     increasing_fillcolor='#ef5350', decreasing_fillcolor='#26a69a',
-                    increasing_line_width=1, decreasing_line_width=1,
+                    #increasing_line_width=1, decreasing_line_width=1,
                     name='K線'
                 ), row=1, col=1)
                 
