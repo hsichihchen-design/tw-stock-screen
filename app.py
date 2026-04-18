@@ -104,7 +104,7 @@ if symbol_list:
             df['MA60'] = df['Close'].rolling(window=60).mean()
             
             # 切片
-            plot_df = df.tail(180).copy()
+            plot_df = df.tail(120).copy()
             
             if not plot_df.empty:
                 # ==========================================
