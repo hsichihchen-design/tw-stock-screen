@@ -85,22 +85,35 @@ def safe_batch_download(tickers, start_date, end_date, batch_size=50):
     return all_data
 
 def check_ma_trend(df):
-    """【宏觀趨勢濾網】多頭排列比例 + 價格階梯式上漲條件"""
+    """【宏觀趨勢濾網】多頭排列比例 (>=0.7) + 區間底部墊高條件"""
     
     # ==========================================
-    # 條件 1：價格階梯保護機制 (底底高)
+    # 條件 1：區間底部支撐墊高保護機制 (箱型底底高)
     # ==========================================
-    # 防呆：確認這檔股票上市時間夠長，至少有 120 個交易日，否則無法比較
+    # 防呆：確認這檔股票上市時間夠長，至少有 120 個交易日
     if len(df) < 120: 
         return False
         
-    # 抓取特定交易日的收盤價 (使用 iloc 由後往前推算)
-    current_price = float(df['Close'].iloc[-1])     # 最新收盤價
-    price_60_ago = float(df['Close'].iloc[-60])     # 60 個交易日前收盤價 (約一季)
-    price_120_ago = float(df['Close'].iloc[-120])   # 120 個交易日前收盤價 (約半年)
+    # 抓取特定交易日的「最低價」
+    current_low = float(df['Low'].iloc[-1])              # 最新 K 棒最低價 (當前)
+    low_60_ago = float(df['Low'].iloc[-60])              # 60 個交易日前 K 棒最低價 (約一季前)
     
-    # 判斷：當前價格不能低於60天前，且60天前不能低於120天前
-    if not ((current_price >= price_60_ago) and (price_60_ago >= price_120_ago)):
+    # 抓取特定「歷史區間」的絕對最低價
+    # iloc[-90:-60]：代表從第 90 根往前推到第 61 根的這一個月區間
+    zone_60_to_90_min = float(df['Low'].iloc[-90:-60].min())
+    
+    # iloc[-120:-90]：代表從第 120 根往前推到第 91 根的這一個月區間
+    zone_120_to_90_min = float(df['Low'].iloc[-120:-90].min())
+    
+    # 邏輯判斷：
+    # A. 最新最低價 >= 第60-90區間的最低價
+    cond_A = current_low >= zone_60_to_90_min
+    
+    # B. 第60天前最低價 >= 第120-90區間的最低價
+    cond_B = low_60_ago >= zone_120_to_90_min
+
+    # 若任一條件不滿足，直接淘汰
+    if not (cond_A and cond_B):
         return False
 
     # ==========================================
@@ -122,8 +135,8 @@ def check_ma_trend(df):
     valid_days = ((recent_df['MA10'] > recent_df['MA60']) & (recent_df['MA20'] > recent_df['MA60'])).sum()
     ratio = valid_days / len(recent_df)
     
-    # 將比例標準放寬至 0.4
-    return ratio >= 0.4
+    # 比例標準調整為 0.7
+    return ratio >= 0.7
 
 def identify_uptrend(df, symbol):
     """【微觀波段識別演算法】"""
