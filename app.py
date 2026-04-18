@@ -62,7 +62,7 @@ with col_time:
 # ==========================================
 all_results = data_store['results']
 end_date = datetime.now()
-half_year_ago = end_date - timedelta(days=180)
+half_year_ago = end_date - timedelta(days=365)
 
 # 取得符合代號列表
 symbol_list = sorted(list(set([seg['symbol'] for seg in all_results])))
@@ -104,31 +104,36 @@ if symbol_list:
             df['MA60'] = df['Close'].rolling(window=60).mean()
             
             # 切片
-            plot_df = df.loc[df.index >= (end_date - timedelta(days=180))]
+            plot_df = df.tail(180).copy()
             
             if not plot_df.empty:
+                # ==========================================
+                # 【核心修改 2】將日期轉為純文字，破除時間軸空白
+                # ==========================================
+                plot_df['DateStr'] = plot_df.index.strftime('%m-%d')
+                
                 # 建立子圖
                 fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                                     row_heights=[0.8, 0.2], vertical_spacing=0.03)
                 
-                # 1. K線 (調整粗細為 1.2，避免高解析度螢幕的次像素模糊)
+                # 1. K線 (把 x=plot_df.index 全部換成 x=plot_df['DateStr'])
                 fig.add_trace(go.Candlestick(
-                    x=plot_df.index, open=plot_df['Open'], high=plot_df['High'], 
+                    x=plot_df['DateStr'], open=plot_df['Open'], high=plot_df['High'], 
                     low=plot_df['Low'], close=plot_df['Close'],
-                    increasing_line_color='#E32636', decreasing_line_color='#008F39', # 👈 換成更高對比、更銳利的紅綠色
+                    increasing_line_color='#E32636', decreasing_line_color='#008F39', 
                     increasing_fillcolor='#E32636', decreasing_fillcolor='#008F39',
-                    increasing_line_width=0.7, decreasing_line_width=0.7,                 # 👈 絕對整數 1，徹底消除反鋸齒的模糊邊緣
+                    increasing_line_width=0.7, decreasing_line_width=0.7,                 
                     name='K線'
                 ), row=1, col=1)
                 
-                # 2. 均線 (把均線稍微調細一點點為 1.2，不要搶走 K 棒的風采)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA10'], line=dict(color='#f6c23e', width=1), name='10MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA20'], line=dict(color='#8e44ad', width=1), name='20MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA60'], line=dict(color='#36b9cc', width=1), name='60MA'), row=1, col=1)
+                # 2. 均線 (x 換成 DateStr)
+                fig.add_trace(go.Scatter(x=plot_df['DateStr'], y=plot_df['MA10'], line=dict(color='#f6c23e', width=1), name='10MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df['DateStr'], y=plot_df['MA20'], line=dict(color='#8e44ad', width=1), name='20MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df['DateStr'], y=plot_df['MA60'], line=dict(color='#36b9cc', width=1), name='60MA'), row=1, col=1)
                 
-                # 3. 成交量
+                # 3. 成交量 (x 換成 DateStr)
                 v_colors = ['#ef5350' if c >= o else '#26a69a' for c, o in zip(plot_df['Close'], plot_df['Open'])]
-                fig.add_trace(go.Bar(x=plot_df.index, y=plot_df['Volume'], marker_color=v_colors, name='量'), row=2, col=1)
+                fig.add_trace(go.Bar(x=plot_df['DateStr'], y=plot_df['Volume'], marker_color=v_colors, name='量'), row=2, col=1)
                 
                 # 4. 排版設定
                 fig.update_layout(
@@ -149,12 +154,11 @@ if symbol_list:
                 )
                 
                 # 5. 座標軸設定
-                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), tickformat='%m-%d', row=1, col=1) # 簡化日期格式為 月-日
-                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=11), tickformat='%m-%d', row=2, col=1)
+                fig.update_xaxes(type='category', nticks=10, showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), row=1, col=1) 
+                fig.update_xaxes(type='category', nticks=10, showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=11), row=2, col=1)
                 
-                # 👈 關鍵修正 3：讓 Y 軸的數字緊貼邊緣，甚至稍微向內靠攏
                 fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), side='right', row=1, col=1)
-                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, showticklabels=False, row=2, col=1) # 隱藏成交量的 Y 軸數字，因為看柱狀圖高低比例就夠了，減少畫面雜訊
+                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, showticklabels=False, row=2, col=1)
                 
                 # ==========================================
                 # 【核心修改點】將圖表塞進對應的欄位中
