@@ -106,7 +106,7 @@ if symbol_list:
             if not plot_df.empty:
                 # 建立子圖
                 fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
-                                    row_heights=[0.6, 0.4], vertical_spacing=0.03)
+                                    row_heights=[0.8, 0.2], vertical_spacing=0.03)
                 
                 # 1. K線 (實心、台股配色)
                 fig.add_trace(go.Candlestick(
@@ -129,7 +129,7 @@ if symbol_list:
                 
                 # 4. 排版設定
                 fig.update_layout(
-                    height=600,
+                    height=450,
                     margin=dict(l=40, r=40, t=60, b=60),
                     xaxis_rangeslider_visible=False,
                     template="plotly_white",
