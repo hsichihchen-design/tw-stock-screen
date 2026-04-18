@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 👈 升級為 v4，解決 Node.js 警告
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # 👈 升級為 v5，解決 Node.js 警告
         with:
           python-version: '3.10'
 
@@ -31,4 +31,8 @@ jobs:
           git config --local user.name "GitHub Action"
           git add uptrend_results.json
           git commit -m "Auto-update: $(date +'%Y-%m-%d')" || exit 0
+          
+          # 👇 加入這行防呆機制：上傳前先同步主線，避免版本衝突
+          git pull --rebase origin main  
+          
           git push
