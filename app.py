@@ -117,7 +117,7 @@ if symbol_list:
                     low=plot_df['Low'], close=plot_df['Close'],
                     increasing_line_color='#E32636', decreasing_line_color='#008F39', # 👈 換成更高對比、更銳利的紅綠色
                     increasing_fillcolor='#E32636', decreasing_fillcolor='#008F39',
-                    increasing_line_width=1, decreasing_line_width=1,                 # 👈 絕對整數 1，徹底消除反鋸齒的模糊邊緣
+                    increasing_line_width=0.7, decreasing_line_width=0.7,                 # 👈 絕對整數 1，徹底消除反鋸齒的模糊邊緣
                     name='K線'
                 ), row=1, col=1)
                 
