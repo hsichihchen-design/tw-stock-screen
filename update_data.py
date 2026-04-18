@@ -98,7 +98,7 @@ def check_ma_trend(df):
     prev_30_high = float(df['High'].iloc[-31:-1].max())  # 倒數第 31 根到倒數第 2 根的最高點
     
     # 判斷：最新最低點必須大於前 30 根最高點的 1.1 倍 (高出 10%)
-    if latest_low < (prev_30_high * 1.10):
+    if latest_low < (prev_30_high * 1.2):
         return False
 
     # ==========================================
