@@ -108,7 +108,8 @@ for i, sym in enumerate(symbol_list):
             paper_bgcolor='white',  # 確保下載背景是實心白
             plot_bgcolor='white',
             title=f"<b>{sym}</b>",
-            showlegend=False
+            showlegend=False,
+            dragmode=False
         )
         
         # 移除 X 軸與 Y 軸的所有格線 (保持不變)
