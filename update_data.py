@@ -136,7 +136,7 @@ def check_ma_trend(df):
     ratio = valid_days / len(recent_df)
     
     # 比例標準調整為 0.7
-    return ratio >= 0.7
+    return ratio >= 0.6
 
 def identify_uptrend(df, symbol):
     """【微觀波段識別演算法】"""
