@@ -84,8 +84,11 @@ if symbol_list:
         stock_data = fetch_batch_data(symbol_list)
 
     # ==========================================
-    # 6. 繪圖渲染
+    # 6. 繪圖渲染 (雙欄極致看板模式)
     # ==========================================
+    # 建立兩個直欄
+    cols = st.columns(2) 
+    
     for i, sym in enumerate(symbol_list):
         try:
             # 取出資料
@@ -108,20 +111,20 @@ if symbol_list:
                 fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                                     row_heights=[0.8, 0.2], vertical_spacing=0.03)
                 
-                # 1. K線 (實心、台股配色)
+                # 1. K線 (調整粗細為 1.2，避免高解析度螢幕的次像素模糊)
                 fig.add_trace(go.Candlestick(
                     x=plot_df.index, open=plot_df['Open'], high=plot_df['High'], 
                     low=plot_df['Low'], close=plot_df['Close'],
                     increasing_line_color='#ef5350', decreasing_line_color='#26a69a', 
                     increasing_fillcolor='#ef5350', decreasing_fillcolor='#26a69a',
-                    increasing_line_width=0.4, decreasing_line_width=0.4,
+                    increasing_line_width=1.2, decreasing_line_width=1.2, # 👈 關鍵修正 1：加重影線像素
                     name='K線'
                 ), row=1, col=1)
                 
-                # 2. 均線
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA10'], line=dict(color='#f6c23e', width=1.5), name='10MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA20'], line=dict(color='#8e44ad', width=1.5), name='20MA'), row=1, col=1)
-                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA60'], line=dict(color='#36b9cc', width=1.5), name='60MA'), row=1, col=1)
+                # 2. 均線 (把均線稍微調細一點點為 1.2，不要搶走 K 棒的風采)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA10'], line=dict(color='#f6c23e', width=1.2), name='10MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA20'], line=dict(color='#8e44ad', width=1.2), name='20MA'), row=1, col=1)
+                fig.add_trace(go.Scatter(x=plot_df.index, y=plot_df['MA60'], line=dict(color='#36b9cc', width=1.2), name='60MA'), row=1, col=1)
                 
                 # 3. 成交量
                 v_colors = ['#ef5350' if c >= o else '#26a69a' for c, o in zip(plot_df['Close'], plot_df['Open'])]
@@ -130,14 +133,15 @@ if symbol_list:
                 # 4. 排版設定
                 fig.update_layout(
                     height=350,
-                    margin=dict(l=40, r=40, t=60, b=60),
+                    # 👈 關鍵修正 2：大幅縮減左邊(l)與下方(b)的留白，把寶貴的像素寬度全數釋放給 K 棒
+                    margin=dict(l=5, r=40, t=50, b=20), 
                     xaxis_rangeslider_visible=False,
                     template="plotly_white",
                     paper_bgcolor='white',
                     plot_bgcolor='white',
                     title=dict(
                         text=f"<b>{sym}</b>", 
-                        font=dict(color='black', size=24)
+                        font=dict(color='black', size=22)
                     ), 
                     font=dict(color='black'), 
                     showlegend=False,
@@ -145,29 +149,34 @@ if symbol_list:
                 )
                 
                 # 5. 座標軸設定
-                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=14), tickformat='%Y-%m-%d', row=1, col=1)
-                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), row=2, col=1)
-                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=14), side='right', row=1, col=1)
-                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), row=2, col=1)
+                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), tickformat='%m-%d', row=1, col=1) # 簡化日期格式為 月-日
+                fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=11), tickformat='%m-%d', row=2, col=1)
                 
-                # 6. 下載與顯示配置
-                st.plotly_chart(
-                    fig, 
-                    use_container_width=True, 
-                    key=f"fig_{sym}", 
-                    theme=None, 
-                    config={
-                        'toImageButtonOptions': {
-                            'format': 'png',
-                            'filename': f'{sym}_Analysis',
-                            'scale': 2
-                        },
-                        'displayModeBar': False
-                    }
-                )
-                st.markdown("<br><br>", unsafe_allow_html=True)
+                # 👈 關鍵修正 3：讓 Y 軸的數字緊貼邊緣，甚至稍微向內靠攏
+                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), side='right', row=1, col=1)
+                fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, showticklabels=False, row=2, col=1) # 隱藏成交量的 Y 軸數字，因為看柱狀圖高低比例就夠了，減少畫面雜訊
+                
+                # ==========================================
+                # 【核心修改點】將圖表塞進對應的欄位中
+                # 偶數索引 (0, 2, 4...) 放左邊 cols[0]，奇數放右邊 cols[1]
+                # ==========================================
+                with cols[i % 2]:
+                    st.plotly_chart(
+                        fig, 
+                        use_container_width=True, 
+                        key=f"fig_{sym}", 
+                        theme=None, 
+                        config={
+                            'toImageButtonOptions': {
+                                'format': 'png',
+                                'filename': f'{sym}_Analysis',
+                                'scale': 2
+                            },
+                            'displayModeBar': False
+                        }
+                    )
+                    st.markdown("<br>", unsafe_allow_html=True)
         except Exception:
             continue
-
 st.write("---")
 st.write("已經到底囉！")
