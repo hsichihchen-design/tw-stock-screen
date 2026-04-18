@@ -150,7 +150,8 @@ if symbol_list:
                     ), 
                     font=dict(color='black'), 
                     showlegend=False,
-                    dragmode=False  
+                    dragmode=False,
+                    hovermode=False
                 )
                 
                 # 5. 座標軸設定
@@ -180,6 +181,7 @@ if symbol_list:
                                 'filename': f'{sym}_Analysis',
                                 'scale': 2
                             },
+                            'staticPlot': True,
                             'displayModeBar': False
                         }
                     )
