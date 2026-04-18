@@ -85,7 +85,7 @@ def safe_batch_download(tickers, start_date, end_date, batch_size=50):
     return all_data
 
 def check_ma_trend(df):
-    """【宏觀趨勢濾網】多頭排列比例 (>=0.7) + 區間底部墊高條件"""
+    """【宏觀趨勢濾網】多頭排列比例 + 區間底部墊高 + 跌破季線天數控管"""
     
     # ==========================================
     # 條件 1：區間底部支撐墊高保護機制 (箱型底底高)
@@ -99,17 +99,11 @@ def check_ma_trend(df):
     low_60_ago = float(df['Low'].iloc[-60])              # 60 個交易日前 K 棒最低價 (約一季前)
     
     # 抓取特定「歷史區間」的絕對最低價
-    # iloc[-90:-60]：代表從第 90 根往前推到第 61 根的這一個月區間
     zone_60_to_90_min = float(df['Low'].iloc[-90:-60].min())
-    
-    # iloc[-120:-90]：代表從第 120 根往前推到第 91 根的這一個月區間
     zone_120_to_90_min = float(df['Low'].iloc[-120:-90].min())
     
     # 邏輯判斷：
-    # A. 最新最低價 >= 第60-90區間的最低價
     cond_A = current_low >= zone_60_to_90_min
-    
-    # B. 第60天前最低價 >= 第120-90區間的最低價
     cond_B = low_60_ago >= zone_120_to_90_min
 
     # 若任一條件不滿足，直接淘汰
@@ -117,10 +111,11 @@ def check_ma_trend(df):
         return False
 
     # ==========================================
-    # 條件 2：均線多頭排列比例
+    # 準備均線與近期資料 (半年內)
     # ==========================================
     temp_df = pd.DataFrame(index=df.index)
     temp_df['Close'] = df['Close']
+    temp_df['Low'] = df['Low']  # 👈 必須將 Low 欄位加入，後續才能與 MA60 比較
     
     temp_df['MA10'] = temp_df['Close'].rolling(window=10).mean()
     temp_df['MA20'] = temp_df['Close'].rolling(window=20).mean()
@@ -132,10 +127,22 @@ def check_ma_trend(df):
     if len(recent_df) < 60: 
         return False
         
+    # ==========================================
+    # 條件 2：跌破季線 (MA60) 的容忍度控管
+    # ==========================================
+    # 計算半年內，最低價低於 MA60 的天數
+    days_below_ma60 = (recent_df['Low'] < recent_df['MA60']).sum()
+    
+    if days_below_ma60 > 36:
+        return False  # 👈 跌破超過 36 根 K 棒，視為防線崩潰，直接淘汰
+        
+    # ==========================================
+    # 條件 3：均線多頭排列比例
+    # ==========================================
     valid_days = ((recent_df['MA10'] > recent_df['MA60']) & (recent_df['MA20'] > recent_df['MA60'])).sum()
     ratio = valid_days / len(recent_df)
     
-    # 比例標準調整為 0.7
+    # 比例標準已依照需求更正為 0.3
     return ratio >= 0.3
 
 def identify_uptrend(df, symbol):
