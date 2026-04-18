@@ -102,7 +102,7 @@ def check_ma_trend(df):
     valid_days = ((recent_df['MA10'] > recent_df['MA60']) & (recent_df['MA20'] > recent_df['MA60'])).sum()
     ratio = valid_days / len(recent_df)
     
-    return ratio >= 0.85
+    return ratio >= 0.75
 
 def identify_uptrend(df, symbol):
     """【微觀波段識別演算法】"""
