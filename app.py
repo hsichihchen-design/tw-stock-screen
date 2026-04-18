@@ -164,6 +164,10 @@ if symbol_list:
                 # 【核心修改點】將圖表塞進對應的欄位中
                 # 偶數索引 (0, 2, 4...) 放左邊 cols[0]，奇數放右邊 cols[1]
                 # ==========================================
+                if i % 2 == 0:
+                    cols = st.columns(2)
+                
+                # 依序塞入目前的排位中 (偶數放左 cols[0]，奇數放右 cols[1])
                 with cols[i % 2]:
                     st.plotly_chart(
                         fig, 
@@ -180,6 +184,7 @@ if symbol_list:
                         }
                     )
                     st.markdown("<br>", unsafe_allow_html=True)
+                
         except Exception:
             continue
 st.write("---")
