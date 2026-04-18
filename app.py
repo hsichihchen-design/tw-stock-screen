@@ -101,32 +101,63 @@ for i, sym in enumerate(symbol_list):
         # 4. 【核心修改】排版設定：關閉格線、設定背景
         fig.update_layout(
             height=600,
-            # 修改這裡：將 l (左) 和 r (右) 設為 30，b (下) 建議也設為 50 讓時間軸有空間
-            margin=dict(l=30, r=30, t=50, b=50), 
+            margin=dict(l=40, r=40, t=60, b=60), # 增加邊距，確保手機端不切字
             xaxis_rangeslider_visible=False,
             template="plotly_white",
-            paper_bgcolor='white',  # 確保下載背景是實心白
+            paper_bgcolor='white',
             plot_bgcolor='white',
-            title=dict(text=f"<b>{sym}</b>", font=dict(color='black', size=22)),
-            font=dict(color='black', size=14),
+            
+            # 標題設定：加大且設為純黑
+            title=dict(
+                text=f"<b>{sym}</b>", 
+                font=dict(color='black', size=24)
+            ), 
+            
+            # 全域字體設定 (作為預備)
+            font=dict(color='black'), 
+            
             showlegend=False,
-            dragmode=False
+            dragmode=False  
         )
         
-        # 移除 X 軸與 Y 軸的所有格線 (保持不變)
-        fig.update_xaxes(showgrid=False, zeroline=False, row=1, col=1)
-        fig.update_xaxes(showgrid=False, zeroline=False, row=2, col=1)
-        fig.update_yaxes(showgrid=False, zeroline=False, row=1, col=1)
-        fig.update_yaxes(showgrid=False, zeroline=False, row=2, col=1)
+        # 5. 座標軸詳細設定：強制刻度文字為純黑
+        # 對 X 軸 (日期) 的設定
+        fig.update_xaxes(
+            showgrid=False, 
+            zeroline=False, 
+            fixedrange=True, 
+            tickfont=dict(color='black', size=14), # 👈 強制設定日期顏色為純黑，字級 14
+            tickformat='%Y-%m-%d',                 # 確保日期格式清晰
+            row=1, col=1
+        )
+        fig.update_xaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), row=2, col=1)
         
-        # 下載配置 (建議 scale 設為 2 讓解析度更高)
-        st.plotly_chart(fig, use_container_width=True, key=f"fig_{sym}", config={
-            'toImageButtonOptions': {
-                'format': 'png',
-                'filename': f'{sym}_Uptrend',
-                'scale': 2 # 高畫質
+        # 對 Y 軸 (價格) 的設定
+        fig.update_yaxes(
+            showgrid=False, 
+            zeroline=False, 
+            fixedrange=True, 
+            tickfont=dict(color='black', size=14), # 👈 強制設定價格顏色為純黑，字級 14
+            side='right',                          # 價格靠右顯示通常在手機上更直覺
+            row=1, col=1
+        )
+        fig.update_yaxes(showgrid=False, zeroline=False, fixedrange=True, tickfont=dict(color='black', size=12), row=2, col=1)
+        
+        # 6. 下載配置
+        st.plotly_chart(
+            fig, 
+            use_container_width=True, 
+            key=f"fig_{sym}", 
+            theme=None,            # 👈 魔法參數：解除 Streamlit 強制主題綁架，還原純黑字體！
+            config={
+                'toImageButtonOptions': {
+                    'format': 'png',
+                    'filename': f'{sym}_Analysis',
+                    'scale': 2
+                },
+                'displayModeBar': False  # 隱藏上方工具列
             }
-        })
+        )
         st.markdown("<br><br>", unsafe_allow_html=True)
 
 st.write("---")
