@@ -114,7 +114,7 @@ if symbol_list:
                     low=plot_df['Low'], close=plot_df['Close'],
                     increasing_line_color='#ef5350', decreasing_line_color='#26a69a', 
                     increasing_fillcolor='#ef5350', decreasing_fillcolor='#26a69a',
-                    #increasing_line_width=1, decreasing_line_width=1,
+                    increasing_line_width=1, decreasing_line_width=1,
                     name='K線'
                 ), row=1, col=1)
                 
@@ -129,7 +129,7 @@ if symbol_list:
                 
                 # 4. 排版設定
                 fig.update_layout(
-                    height=450,
+                    height=400,
                     margin=dict(l=40, r=40, t=60, b=60),
                     xaxis_rangeslider_visible=False,
                     template="plotly_white",
