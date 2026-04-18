@@ -85,37 +85,45 @@ def safe_batch_download(tickers, start_date, end_date, batch_size=50):
     return all_data
 
 def check_ma_trend(df):
-    """【宏觀趨勢濾網】多頭排列比例 + 區間底部墊高 + 跌破季線天數控管"""
+    """【宏觀趨勢濾網】多頭排列 + 底部墊高 + 季線控管 + 強勢突破"""
     
-    # ==========================================
-    # 條件 1：區間底部支撐墊高保護機制 (箱型底底高)
-    # ==========================================
     # 防呆：確認這檔股票上市時間夠長，至少有 120 個交易日
     if len(df) < 120: 
         return False
-        
-    # 抓取特定交易日的「最低價」
-    current_low = float(df['Low'].iloc[-1])              # 最新 K 棒最低價 (當前)
-    low_60_ago = float(df['Low'].iloc[-60])              # 60 個交易日前 K 棒最低價 (約一季前)
+
+    # ==========================================
+    # 條件 1：最新 K 棒強勢突破 (脫離前一個月天花板 10%)
+    # ==========================================
+    latest_low = float(df['Low'].iloc[-1])               # 最新一根 K 棒的最低點
+    prev_30_high = float(df['High'].iloc[-31:-1].max())  # 倒數第 31 根到倒數第 2 根的最高點
+    
+    # 判斷：最新最低點必須大於前 30 根最高點的 1.1 倍 (高出 10%)
+    if latest_low < (prev_30_high * 1.10):
+        return False
+
+    # ==========================================
+    # 條件 2：區間底部支撐墊高保護機制 (箱型底底高)
+    # ==========================================
+    # 👈 這裡一併修復了上一版的 Bug，改用 .min() 抓出近 30 天的絕對最低點
+    current_zone_low = float(df['Low'].iloc[-30:].min())              
+    low_60_ago = float(df['Low'].iloc[-60])              
     
     # 抓取特定「歷史區間」的絕對最低價
     zone_60_to_90_min = float(df['Low'].iloc[-90:-60].min())
     zone_120_to_90_min = float(df['Low'].iloc[-120:-90].min())
     
-    # 邏輯判斷：
-    cond_A = current_low >= zone_60_to_90_min
+    cond_A = current_zone_low >= zone_60_to_90_min
     cond_B = low_60_ago >= zone_120_to_90_min
 
-    # 若任一條件不滿足，直接淘汰
-    if not (cond_A and cond_B):
-        return False
+    #if not (cond_A and cond_B):
+    #    return False
 
     # ==========================================
     # 準備均線與近期資料 (半年內)
     # ==========================================
     temp_df = pd.DataFrame(index=df.index)
     temp_df['Close'] = df['Close']
-    temp_df['Low'] = df['Low']  # 👈 必須將 Low 欄位加入，後續才能與 MA60 比較
+    temp_df['Low'] = df['Low']  
     
     temp_df['MA10'] = temp_df['Close'].rolling(window=10).mean()
     temp_df['MA20'] = temp_df['Close'].rolling(window=20).mean()
@@ -124,25 +132,23 @@ def check_ma_trend(df):
     half_year_ago = datetime.now() - timedelta(days=180)
     recent_df = temp_df[temp_df.index >= half_year_ago].dropna()
     
-    #if len(recent_df) < 60: 
-    #    return False
+    # ==========================================
+    # 條件 3：跌破季線 (MA60) 的容忍度控管
+    # ==========================================
+    if len(recent_df) > 0:
+        days_below_ma60 = (recent_df['Low'] < recent_df['MA60']).sum()
+        if days_below_ma60 > 60:
+            return False  
         
     # ==========================================
-    # 條件 2：跌破季線 (MA60) 的容忍度控管
+    # 條件 4：均線多頭排列比例
     # ==========================================
-    # 計算半年內，最低價低於 MA60 的天數
-    days_below_ma60 = (recent_df['Low'] < recent_df['MA60']).sum()
-    
-    if days_below_ma60 > 60:
-        return False  # 👈 跌破超過 36 根 K 棒，視為防線崩潰，直接淘汰
+    if len(recent_df) < 60: 
+        return False
         
-    # ==========================================
-    # 條件 3：均線多頭排列比例
-    # ==========================================
     valid_days = ((recent_df['MA10'] > recent_df['MA60']) & (recent_df['MA20'] > recent_df['MA60'])).sum()
     ratio = valid_days / len(recent_df)
     
-    # 比例標準已依照需求更正為 0.3
     return ratio >= 0.3
 
 def identify_uptrend(df, symbol):
