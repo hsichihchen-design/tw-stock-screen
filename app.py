@@ -107,7 +107,8 @@ for i, sym in enumerate(symbol_list):
             template="plotly_white",
             paper_bgcolor='white',  # 確保下載背景是實心白
             plot_bgcolor='white',
-            title=f"<b>{sym}</b>",
+            title=dict(text=f"<b>{sym}</b>", font=dict(color='black', size=22)),
+            font=dict(color='black', size=14),
             showlegend=False,
             dragmode=False
         )
