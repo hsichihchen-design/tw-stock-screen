@@ -10,8 +10,8 @@ from datetime import datetime, timedelta
 # ==========================================
 # 參數設定
 # ==========================================
-YEARS = 1
-MIN_RISE_PCT = 0.35      # 波段最小漲幅 35%
+YEARS = 0.65
+MIN_RISE_PCT = 0.3      # 波段最小漲幅 35%
 MIN_DURATION = 5         # 最少持續 5 天
 LOOKBACK_PERIOD = 15     # 找尋局部高低點的視窗大小
 MAX_STOCKS = None        # None 代表跑全市場
@@ -228,7 +228,7 @@ def main():
     filtered_out_by_timing = 0  # 紀錄因時間條件被淘汰的數量
     
     # 計算兩個月前（60天前）的基準日期
-    two_months_ago = datetime.now() - timedelta(days=30)
+    two_months_ago = datetime.now() - timedelta(days=15)
     
     print("\n開始執行三重過濾 (宏觀均線 + 微觀波段 + 沉澱期濾網)...")
     for symbol in tickers:
