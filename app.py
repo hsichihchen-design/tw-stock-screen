@@ -129,7 +129,7 @@ if symbol_list:
                 
                 # 4. 排版設定
                 fig.update_layout(
-                    height=400,
+                    height=500,
                     margin=dict(l=40, r=40, t=60, b=60),
                     xaxis_rangeslider_visible=False,
                     template="plotly_white",
