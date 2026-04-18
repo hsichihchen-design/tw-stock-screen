@@ -20,7 +20,21 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("📈 台股近半年線圖")
+last_updated = data_store.get('last_updated', '未知')
+
+# 建立兩欄：第一欄寬度大，放標題；第二欄寬度小，放更新時間
+col_title, col_time = st.columns([3, 1])
+
+with col_title:
+    st.title("📈 台股近半年線圖")
+
+with col_time:
+    # 這裡使用 markdown 加上簡單的 CSS 來微調位置，讓它靠右並對齊標題高度
+    st.markdown(f"""
+        <div style="text-align: right; padding-top: 25px; color: #555555; font-size: 0.9rem;">
+            <b>最後更新時間</b><br>{last_updated}
+        </div>
+        """, unsafe_allow_html=True)
 
 @st.cache_data(ttl=3600)
 def load_analysis_results():
@@ -161,4 +175,4 @@ for i, sym in enumerate(symbol_list):
         st.markdown("<br><br>", unsafe_allow_html=True)
 
 st.write("---")
-st.write("已經到底囉！畫面已優化為無格線潔淨模式。")
+st.write("已經到底囉！")
