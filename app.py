@@ -23,7 +23,6 @@ st.markdown("""
 # ==========================================
 # 1. 先定義載入資料的函數
 # ==========================================
-@st.cache_data(ttl=3600)
 def load_analysis_results():
     try:
         with open('uptrend_results.json', 'r', encoding='utf-8') as f:
