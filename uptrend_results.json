@@ -1,7 +1,43 @@
 {
-  "last_updated": "2026-04-18 15:49:49",
-  "total_segments_found": 232,
+  "last_updated": "2026-04-18 15:57:44",
+  "total_segments_found": 516,
   "results": [
+    {
+      "symbol": "1215.TW",
+      "start_date": "2025-08-04",
+      "end_date": "2026-03-06",
+      "start_price": 115.0,
+      "end_price": 163.5,
+      "rise_pct": 0.4217,
+      "duration_days": 140
+    },
+    {
+      "symbol": "1236.TW",
+      "start_date": "2025-08-08",
+      "end_date": "2026-03-03",
+      "start_price": 20.6,
+      "end_price": 28.7,
+      "rise_pct": 0.3932,
+      "duration_days": 133
+    },
+    {
+      "symbol": "1301.TW",
+      "start_date": "2025-06-02",
+      "end_date": "2026-03-09",
+      "start_price": 32.49,
+      "end_price": 54.8,
+      "rise_pct": 0.6867,
+      "duration_days": 185
+    },
+    {
+      "symbol": "1301.TW",
+      "start_date": "2025-07-11",
+      "end_date": "2025-12-04",
+      "start_price": 32.93,
+      "end_price": 44.8,
+      "rise_pct": 0.3604,
+      "duration_days": 99
+    },
     {
       "symbol": "1303.TW",
       "start_date": "2025-07-11",
@@ -28,6 +64,15 @@
       "end_price": 13.0,
       "rise_pct": 0.4717,
       "duration_days": 149
+    },
+    {
+      "symbol": "1305.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-25",
+      "start_price": 9.38,
+      "end_price": 12.8,
+      "rise_pct": 0.365,
+      "duration_days": 44
     },
     {
       "symbol": "1308.TW",
@@ -57,6 +102,15 @@
       "duration_days": 76
     },
     {
+      "symbol": "1313.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-09",
+      "start_price": 7.27,
+      "end_price": 14.85,
+      "rise_pct": 1.0434,
+      "duration_days": 170
+    },
+    {
       "symbol": "1326.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-03-02",
@@ -66,22 +120,31 @@
       "duration_days": 165
     },
     {
-      "symbol": "1516.TW",
-      "start_date": "2025-09-01",
-      "end_date": "2026-03-11",
-      "start_price": 13.8,
-      "end_price": 26.05,
-      "rise_pct": 0.8877,
-      "duration_days": 123
+      "symbol": "1409.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-19",
+      "start_price": 11.21,
+      "end_price": 18.47,
+      "rise_pct": 0.6481,
+      "duration_days": 40
     },
     {
-      "symbol": "1516.TW",
-      "start_date": "2025-11-07",
-      "end_date": "2025-12-30",
-      "start_price": 16.0,
-      "end_price": 24.6,
-      "rise_pct": 0.5375,
-      "duration_days": 36
+      "symbol": "1409.TW",
+      "start_date": "2025-08-12",
+      "end_date": "2026-03-18",
+      "start_price": 11.93,
+      "end_price": 17.4,
+      "rise_pct": 0.4586,
+      "duration_days": 142
+    },
+    {
+      "symbol": "1471.TW",
+      "start_date": "2025-11-18",
+      "end_date": "2026-01-28",
+      "start_price": 8.2,
+      "end_price": 15.55,
+      "rise_pct": 0.8963,
+      "duration_days": 49
     },
     {
       "symbol": "1519.TW",
@@ -102,6 +165,42 @@
       "duration_days": 71
     },
     {
+      "symbol": "1524.TW",
+      "start_date": "2025-10-13",
+      "end_date": "2026-01-27",
+      "start_price": 25.1,
+      "end_price": 35.07,
+      "rise_pct": 0.3973,
+      "duration_days": 73
+    },
+    {
+      "symbol": "1528.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-20",
+      "start_price": 11.98,
+      "end_price": 34.0,
+      "rise_pct": 1.8391,
+      "duration_days": 144
+    },
+    {
+      "symbol": "1528.TW",
+      "start_date": "2025-07-22",
+      "end_date": "2025-08-19",
+      "start_price": 12.07,
+      "end_price": 22.61,
+      "rise_pct": 0.8724,
+      "duration_days": 19
+    },
+    {
+      "symbol": "1560.TW",
+      "start_date": "2025-11-19",
+      "end_date": "2026-02-26",
+      "start_price": 297.0,
+      "end_price": 543.0,
+      "rise_pct": 0.8283,
+      "duration_days": 62
+    },
+    {
       "symbol": "1590.TW",
       "start_date": "2025-09-17",
       "end_date": "2026-02-11",
@@ -120,6 +219,24 @@
       "duration_days": 86
     },
     {
+      "symbol": "1711.TW",
+      "start_date": "2025-07-10",
+      "end_date": "2026-03-20",
+      "start_price": 15.2,
+      "end_price": 45.85,
+      "rise_pct": 2.0164,
+      "duration_days": 166
+    },
+    {
+      "symbol": "1711.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-15",
+      "start_price": 17.05,
+      "end_price": 25.25,
+      "rise_pct": 0.4809,
+      "duration_days": 37
+    },
+    {
       "symbol": "1714.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-03-09",
@@ -129,13 +246,40 @@
       "duration_days": 170
     },
     {
-      "symbol": "1718.TW",
-      "start_date": "2025-06-23",
-      "end_date": "2026-03-09",
-      "start_price": 5.68,
-      "end_price": 8.29,
-      "rise_pct": 0.4595,
-      "duration_days": 170
+      "symbol": "1717.TW",
+      "start_date": "2025-07-11",
+      "end_date": "2026-01-19",
+      "start_price": 23.7,
+      "end_price": 72.2,
+      "rise_pct": 2.0464,
+      "duration_days": 129
+    },
+    {
+      "symbol": "1717.TW",
+      "start_date": "2025-10-23",
+      "end_date": "2026-03-02",
+      "start_price": 37.85,
+      "end_price": 72.2,
+      "rise_pct": 0.9075,
+      "duration_days": 81
+    },
+    {
+      "symbol": "1721.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-19",
+      "start_price": 10.65,
+      "end_price": 22.6,
+      "rise_pct": 1.1221,
+      "duration_days": 38
+    },
+    {
+      "symbol": "1721.TW",
+      "start_date": "2026-03-09",
+      "end_date": "2026-03-17",
+      "start_price": 15.6,
+      "end_price": 21.4,
+      "rise_pct": 0.3718,
+      "duration_days": 6
     },
     {
       "symbol": "1727.TW",
@@ -154,6 +298,24 @@
       "end_price": 52.0,
       "rise_pct": 0.5663,
       "duration_days": 43
+    },
+    {
+      "symbol": "1735.TW",
+      "start_date": "2025-09-23",
+      "end_date": "2026-03-19",
+      "start_price": 14.15,
+      "end_price": 33.85,
+      "rise_pct": 1.3922,
+      "duration_days": 113
+    },
+    {
+      "symbol": "1735.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2025-12-31",
+      "start_price": 14.2,
+      "end_price": 19.85,
+      "rise_pct": 0.3979,
+      "duration_days": 27
     },
     {
       "symbol": "1802.TW",
@@ -183,6 +345,24 @@
       "duration_days": 29
     },
     {
+      "symbol": "1809.TW",
+      "start_date": "2025-07-08",
+      "end_date": "2026-03-20",
+      "start_price": 14.81,
+      "end_price": 35.75,
+      "rise_pct": 1.4131,
+      "duration_days": 168
+    },
+    {
+      "symbol": "1809.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-27",
+      "start_price": 17.1,
+      "end_price": 30.0,
+      "rise_pct": 0.7544,
+      "duration_days": 45
+    },
+    {
       "symbol": "2006.TW",
       "start_date": "2025-09-19",
       "end_date": "2026-03-11",
@@ -192,13 +372,94 @@
       "duration_days": 109
     },
     {
-      "symbol": "2069.TW",
+      "symbol": "2014.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-02-02",
+      "start_price": 13.5,
+      "end_price": 20.9,
+      "rise_pct": 0.5481,
+      "duration_days": 153
+    },
+    {
+      "symbol": "2014.TW",
+      "start_date": "2025-07-16",
+      "end_date": "2026-03-23",
+      "start_price": 13.8,
+      "end_price": 20.35,
+      "rise_pct": 0.4746,
+      "duration_days": 163
+    },
+    {
+      "symbol": "2028.TW",
+      "start_date": "2025-11-05",
+      "end_date": "2026-01-30",
+      "start_price": 14.9,
+      "end_price": 21.9,
+      "rise_pct": 0.4698,
+      "duration_days": 60
+    },
+    {
+      "symbol": "2030.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-01-30",
-      "start_price": 13.85,
-      "end_price": 21.5,
-      "rise_pct": 0.5523,
+      "start_price": 13.53,
+      "end_price": 18.65,
+      "rise_pct": 0.3788,
       "duration_days": 152
+    },
+    {
+      "symbol": "2032.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-30",
+      "start_price": 12.52,
+      "end_price": 18.44,
+      "rise_pct": 0.473,
+      "duration_days": 152
+    },
+    {
+      "symbol": "2103.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-09",
+      "start_price": 13.6,
+      "end_price": 22.7,
+      "rise_pct": 0.6691,
+      "duration_days": 65
+    },
+    {
+      "symbol": "2104.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-02-25",
+      "start_price": 9.33,
+      "end_price": 14.8,
+      "rise_pct": 0.5863,
+      "duration_days": 58
+    },
+    {
+      "symbol": "2236.TW",
+      "start_date": "2025-10-20",
+      "end_date": "2026-01-02",
+      "start_price": 79.51,
+      "end_price": 121.0,
+      "rise_pct": 0.5218,
+      "duration_days": 51
+    },
+    {
+      "symbol": "2236.TW",
+      "start_date": "2025-11-18",
+      "end_date": "2026-01-05",
+      "start_price": 80.38,
+      "end_price": 121.0,
+      "rise_pct": 0.5054,
+      "duration_days": 32
+    },
+    {
+      "symbol": "2301.TW",
+      "start_date": "2025-12-15",
+      "end_date": "2026-02-25",
+      "start_price": 145.39,
+      "end_price": 196.47,
+      "rise_pct": 0.3514,
+      "duration_days": 43
     },
     {
       "symbol": "2303.TW",
@@ -210,6 +471,15 @@
       "duration_days": 110
     },
     {
+      "symbol": "2305.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-15",
+      "start_price": 9.7,
+      "end_price": 16.0,
+      "rise_pct": 0.6495,
+      "duration_days": 141
+    },
+    {
       "symbol": "2313.TW",
       "start_date": "2025-06-23",
       "end_date": "2025-10-21",
@@ -219,22 +489,13 @@
       "duration_days": 82
     },
     {
-      "symbol": "2323.TW",
-      "start_date": "2025-06-23",
-      "end_date": "2026-03-20",
-      "start_price": 7.37,
-      "end_price": 13.1,
-      "rise_pct": 0.7778,
-      "duration_days": 179
-    },
-    {
-      "symbol": "2323.TW",
-      "start_date": "2025-08-04",
-      "end_date": "2026-01-07",
-      "start_price": 7.44,
-      "end_price": 11.7,
-      "rise_pct": 0.5734,
-      "duration_days": 106
+      "symbol": "2316.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2025-12-01",
+      "start_price": 87.7,
+      "end_price": 123.0,
+      "rise_pct": 0.4025,
+      "duration_days": 6
     },
     {
       "symbol": "2327.TW",
@@ -255,6 +516,24 @@
       "duration_days": 98
     },
     {
+      "symbol": "2329.TW",
+      "start_date": "2025-07-15",
+      "end_date": "2026-01-21",
+      "start_price": 36.55,
+      "end_price": 71.1,
+      "rise_pct": 0.9453,
+      "duration_days": 129
+    },
+    {
+      "symbol": "2329.TW",
+      "start_date": "2025-12-05",
+      "end_date": "2026-03-20",
+      "start_price": 45.2,
+      "end_price": 66.3,
+      "rise_pct": 0.4668,
+      "duration_days": 65
+    },
+    {
       "symbol": "2330.TW",
       "start_date": "2025-11-24",
       "end_date": "2026-02-25",
@@ -264,22 +543,40 @@
       "duration_days": 58
     },
     {
-      "symbol": "2344.TW",
-      "start_date": "2025-08-07",
-      "end_date": "2026-01-30",
-      "start_price": 16.41,
-      "end_price": 135.29,
-      "rise_pct": 7.2424,
-      "duration_days": 120
+      "symbol": "2340.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-09-19",
+      "start_price": 18.2,
+      "end_price": 33.6,
+      "rise_pct": 0.8462,
+      "duration_days": 63
     },
     {
-      "symbol": "2344.TW",
-      "start_date": "2026-02-06",
-      "end_date": "2026-03-18",
-      "start_price": 94.51,
-      "end_price": 128.83,
-      "rise_pct": 0.3632,
-      "duration_days": 20
+      "symbol": "2340.TW",
+      "start_date": "2025-09-11",
+      "end_date": "2026-01-21",
+      "start_price": 21.75,
+      "end_price": 30.8,
+      "rise_pct": 0.4161,
+      "duration_days": 88
+    },
+    {
+      "symbol": "2345.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-09",
+      "start_price": 689.98,
+      "end_price": 1320.0,
+      "rise_pct": 0.9131,
+      "duration_days": 137
+    },
+    {
+      "symbol": "2355.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-29",
+      "start_price": 28.39,
+      "end_price": 41.75,
+      "rise_pct": 0.4708,
+      "duration_days": 48
     },
     {
       "symbol": "2360.TW",
@@ -289,6 +586,15 @@
       "end_price": 864.0,
       "rise_pct": 1.1573,
       "duration_days": 80
+    },
+    {
+      "symbol": "2367.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-18",
+      "start_price": 21.8,
+      "end_price": 33.0,
+      "rise_pct": 0.5135,
+      "duration_days": 39
     },
     {
       "symbol": "2368.TW",
@@ -354,13 +660,49 @@
       "duration_days": 56
     },
     {
-      "symbol": "2408.TW",
-      "start_date": "2025-07-22",
-      "end_date": "2026-01-30",
-      "start_price": 40.2,
-      "end_price": 326.5,
-      "rise_pct": 7.1219,
-      "duration_days": 131
+      "symbol": "2404.TW",
+      "start_date": "2025-11-12",
+      "end_date": "2026-01-16",
+      "start_price": 726.0,
+      "end_price": 1245.0,
+      "rise_pct": 0.7149,
+      "duration_days": 45
+    },
+    {
+      "symbol": "2406.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-03",
+      "start_price": 10.6,
+      "end_price": 39.85,
+      "rise_pct": 2.7594,
+      "duration_days": 166
+    },
+    {
+      "symbol": "2406.TW",
+      "start_date": "2025-11-05",
+      "end_date": "2026-01-15",
+      "start_price": 17.75,
+      "end_price": 32.95,
+      "rise_pct": 0.8563,
+      "duration_days": 49
+    },
+    {
+      "symbol": "2409.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-12",
+      "start_price": 10.8,
+      "end_price": 18.0,
+      "rise_pct": 0.6667,
+      "duration_days": 68
+    },
+    {
+      "symbol": "2409.TW",
+      "start_date": "2025-12-18",
+      "end_date": "2026-01-08",
+      "start_price": 11.1,
+      "end_price": 17.5,
+      "rise_pct": 0.5766,
+      "duration_days": 13
     },
     {
       "symbol": "2413.TW",
@@ -390,6 +732,33 @@
       "duration_days": 164
     },
     {
+      "symbol": "2440.TW",
+      "start_date": "2025-07-29",
+      "end_date": "2026-01-23",
+      "start_price": 11.85,
+      "end_price": 17.35,
+      "rise_pct": 0.4641,
+      "duration_days": 121
+    },
+    {
+      "symbol": "2444.TW",
+      "start_date": "2025-09-15",
+      "end_date": "2026-03-03",
+      "start_price": 10.35,
+      "end_price": 15.75,
+      "rise_pct": 0.5217,
+      "duration_days": 107
+    },
+    {
+      "symbol": "2444.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-23",
+      "start_price": 10.4,
+      "end_price": 15.65,
+      "rise_pct": 0.5048,
+      "duration_days": 43
+    },
+    {
       "symbol": "2449.TW",
       "start_date": "2025-11-21",
       "end_date": "2026-02-25",
@@ -417,6 +786,69 @@
       "duration_days": 22
     },
     {
+      "symbol": "2454.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-26",
+      "start_price": 1108.51,
+      "end_price": 1975.0,
+      "rise_pct": 0.7817,
+      "duration_days": 60
+    },
+    {
+      "symbol": "2455.TW",
+      "start_date": "2025-06-02",
+      "end_date": "2026-03-03",
+      "start_price": 94.42,
+      "end_price": 262.0,
+      "rise_pct": 1.7748,
+      "duration_days": 181
+    },
+    {
+      "symbol": "2455.TW",
+      "start_date": "2025-12-16",
+      "end_date": "2026-01-21",
+      "start_price": 129.5,
+      "end_price": 196.0,
+      "rise_pct": 0.5135,
+      "duration_days": 24
+    },
+    {
+      "symbol": "2460.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-25",
+      "start_price": 14.0,
+      "end_price": 29.8,
+      "rise_pct": 1.1286,
+      "duration_days": 59
+    },
+    {
+      "symbol": "2464.TW",
+      "start_date": "2025-07-11",
+      "end_date": "2026-03-18",
+      "start_price": 53.2,
+      "end_price": 85.0,
+      "rise_pct": 0.5977,
+      "duration_days": 163
+    },
+    {
+      "symbol": "2464.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-09",
+      "start_price": 56.8,
+      "end_price": 78.6,
+      "rise_pct": 0.3838,
+      "duration_days": 54
+    },
+    {
+      "symbol": "2467.TW",
+      "start_date": "2025-07-15",
+      "end_date": "2026-01-05",
+      "start_price": 141.5,
+      "end_price": 286.0,
+      "rise_pct": 1.0212,
+      "duration_days": 117
+    },
+    {
       "symbol": "2472.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-01-14",
@@ -435,22 +867,22 @@
       "duration_days": 8
     },
     {
-      "symbol": "2481.TW",
-      "start_date": "2025-07-08",
-      "end_date": "2025-10-22",
-      "start_price": 44.16,
-      "end_price": 101.15,
-      "rise_pct": 1.2904,
-      "duration_days": 72
+      "symbol": "2478.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-26",
+      "start_price": 40.04,
+      "end_price": 76.3,
+      "rise_pct": 0.9057,
+      "duration_days": 148
     },
     {
-      "symbol": "2481.TW",
-      "start_date": "2025-10-13",
-      "end_date": "2026-01-22",
-      "start_price": 66.58,
-      "end_price": 100.66,
-      "rise_pct": 0.5118,
-      "duration_days": 70
+      "symbol": "2478.TW",
+      "start_date": "2025-09-11",
+      "end_date": "2026-03-20",
+      "start_price": 41.3,
+      "end_price": 75.0,
+      "rise_pct": 0.816,
+      "duration_days": 122
     },
     {
       "symbol": "2485.TW",
@@ -525,6 +957,33 @@
       "duration_days": 75
     },
     {
+      "symbol": "2515.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-02-24",
+      "start_price": 9.62,
+      "end_price": 18.65,
+      "rise_pct": 0.9394,
+      "duration_days": 162
+    },
+    {
+      "symbol": "2515.TW",
+      "start_date": "2025-10-07",
+      "end_date": "2025-11-11",
+      "start_price": 9.9,
+      "end_price": 17.5,
+      "rise_pct": 0.7673,
+      "duration_days": 23
+    },
+    {
+      "symbol": "2527.TW",
+      "start_date": "2025-10-15",
+      "end_date": "2026-01-13",
+      "start_price": 22.05,
+      "end_price": 33.8,
+      "rise_pct": 0.5329,
+      "duration_days": 61
+    },
+    {
       "symbol": "2535.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-02-25",
@@ -550,6 +1009,15 @@
       "end_price": 31.55,
       "rise_pct": 0.4406,
       "duration_days": 41
+    },
+    {
+      "symbol": "2606.TW",
+      "start_date": "2025-07-10",
+      "end_date": "2026-03-02",
+      "start_price": 48.2,
+      "end_price": 71.5,
+      "rise_pct": 0.4834,
+      "duration_days": 152
     },
     {
       "symbol": "2637.TW",
@@ -678,6 +1146,24 @@
       "duration_days": 24
     },
     {
+      "symbol": "3016.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-22",
+      "start_price": 28.74,
+      "end_price": 76.8,
+      "rise_pct": 1.6726,
+      "duration_days": 146
+    },
+    {
+      "symbol": "3016.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-18",
+      "start_price": 46.6,
+      "end_price": 67.3,
+      "rise_pct": 0.4442,
+      "duration_days": 73
+    },
+    {
       "symbol": "3017.TW",
       "start_date": "2025-09-04",
       "end_date": "2025-11-12",
@@ -685,6 +1171,33 @@
       "end_price": 1585.0,
       "rise_pct": 0.7303,
       "duration_days": 45
+    },
+    {
+      "symbol": "3026.TW",
+      "start_date": "2025-06-24",
+      "end_date": "2025-10-23",
+      "start_price": 75.0,
+      "end_price": 126.5,
+      "rise_pct": 0.6867,
+      "duration_days": 83
+    },
+    {
+      "symbol": "3030.TW",
+      "start_date": "2025-07-22",
+      "end_date": "2025-08-25",
+      "start_price": 140.5,
+      "end_price": 221.0,
+      "rise_pct": 0.573,
+      "duration_days": 23
+    },
+    {
+      "symbol": "3030.TW",
+      "start_date": "2025-11-19",
+      "end_date": "2026-03-13",
+      "start_price": 139.5,
+      "end_price": 281.5,
+      "rise_pct": 1.0179,
+      "duration_days": 72
     },
     {
       "symbol": "3036.TW",
@@ -741,6 +1254,42 @@
       "duration_days": 48
     },
     {
+      "symbol": "3054.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-18",
+      "start_price": 22.0,
+      "end_price": 96.0,
+      "rise_pct": 3.3636,
+      "duration_days": 73
+    },
+    {
+      "symbol": "3090.TW",
+      "start_date": "2025-07-07",
+      "end_date": "2026-01-05",
+      "start_price": 67.4,
+      "end_price": 113.0,
+      "rise_pct": 0.6766,
+      "duration_days": 123
+    },
+    {
+      "symbol": "3090.TW",
+      "start_date": "2025-08-20",
+      "end_date": "2025-10-28",
+      "start_price": 67.8,
+      "end_price": 103.0,
+      "rise_pct": 0.5192,
+      "duration_days": 45
+    },
+    {
+      "symbol": "3092.TW",
+      "start_date": "2025-11-10",
+      "end_date": "2026-03-05",
+      "start_price": 13.0,
+      "end_price": 40.5,
+      "rise_pct": 2.1154,
+      "duration_days": 73
+    },
+    {
       "symbol": "3135.TW",
       "start_date": "2025-06-03",
       "end_date": "2026-03-20",
@@ -768,6 +1317,15 @@
       "duration_days": 26
     },
     {
+      "symbol": "3138.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-03",
+      "start_price": 80.94,
+      "end_price": 239.0,
+      "rise_pct": 1.9526,
+      "duration_days": 166
+    },
+    {
       "symbol": "3167.TW",
       "start_date": "2025-10-13",
       "end_date": "2025-12-30",
@@ -786,6 +1344,42 @@
       "duration_days": 57
     },
     {
+      "symbol": "3229.TW",
+      "start_date": "2025-07-09",
+      "end_date": "2025-12-17",
+      "start_price": 13.4,
+      "end_price": 29.5,
+      "rise_pct": 1.2015,
+      "duration_days": 110
+    },
+    {
+      "symbol": "3380.TW",
+      "start_date": "2025-06-03",
+      "end_date": "2026-01-26",
+      "start_price": 25.11,
+      "end_price": 36.35,
+      "rise_pct": 0.4474,
+      "duration_days": 162
+    },
+    {
+      "symbol": "3380.TW",
+      "start_date": "2025-08-11",
+      "end_date": "2025-10-30",
+      "start_price": 25.9,
+      "end_price": 35.95,
+      "rise_pct": 0.388,
+      "duration_days": 54
+    },
+    {
+      "symbol": "3419.TW",
+      "start_date": "2025-06-20",
+      "end_date": "2026-03-02",
+      "start_price": 12.0,
+      "end_price": 17.15,
+      "rise_pct": 0.4292,
+      "duration_days": 166
+    },
+    {
       "symbol": "3443.TW",
       "start_date": "2025-06-19",
       "end_date": "2026-02-03",
@@ -793,6 +1387,78 @@
       "end_price": 2830.0,
       "rise_pct": 1.7476,
       "duration_days": 156
+    },
+    {
+      "symbol": "3450.TW",
+      "start_date": "2025-06-05",
+      "end_date": "2026-03-03",
+      "start_price": 176.59,
+      "end_price": 334.0,
+      "rise_pct": 0.8914,
+      "duration_days": 178
+    },
+    {
+      "symbol": "3450.TW",
+      "start_date": "2025-08-11",
+      "end_date": "2025-10-03",
+      "start_price": 184.5,
+      "end_price": 307.0,
+      "rise_pct": 0.664,
+      "duration_days": 38
+    },
+    {
+      "symbol": "3450.TW",
+      "start_date": "2025-11-19",
+      "end_date": "2025-12-10",
+      "start_price": 209.0,
+      "end_price": 289.0,
+      "rise_pct": 0.3828,
+      "duration_days": 15
+    },
+    {
+      "symbol": "3481.TW",
+      "start_date": "2025-07-22",
+      "end_date": "2026-03-12",
+      "start_price": 11.0,
+      "end_price": 33.3,
+      "rise_pct": 2.0273,
+      "duration_days": 152
+    },
+    {
+      "symbol": "3481.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-22",
+      "start_price": 12.1,
+      "end_price": 29.15,
+      "rise_pct": 1.4091,
+      "duration_days": 41
+    },
+    {
+      "symbol": "3532.TW",
+      "start_date": "2025-06-02",
+      "end_date": "2026-01-26",
+      "start_price": 66.03,
+      "end_price": 161.0,
+      "rise_pct": 1.4384,
+      "duration_days": 163
+    },
+    {
+      "symbol": "3532.TW",
+      "start_date": "2025-09-01",
+      "end_date": "2025-09-22",
+      "start_price": 77.8,
+      "end_price": 125.5,
+      "rise_pct": 0.6131,
+      "duration_days": 15
+    },
+    {
+      "symbol": "3533.TW",
+      "start_date": "2025-08-20",
+      "end_date": "2025-09-17",
+      "start_price": 1255.0,
+      "end_price": 1735.0,
+      "rise_pct": 0.3825,
+      "duration_days": 20
     },
     {
       "symbol": "3535.TW",
@@ -820,6 +1486,87 @@
       "end_price": 101.5,
       "rise_pct": 0.5104,
       "duration_days": 12
+    },
+    {
+      "symbol": "3550.TW",
+      "start_date": "2025-12-15",
+      "end_date": "2026-02-10",
+      "start_price": 12.2,
+      "end_price": 22.65,
+      "rise_pct": 0.8566,
+      "duration_days": 39
+    },
+    {
+      "symbol": "3550.TW",
+      "start_date": "2026-03-09",
+      "end_date": "2026-03-17",
+      "start_price": 14.9,
+      "end_price": 21.8,
+      "rise_pct": 0.4631,
+      "duration_days": 6
+    },
+    {
+      "symbol": "3576.TW",
+      "start_date": "2025-09-11",
+      "end_date": "2026-03-17",
+      "start_price": 6.0,
+      "end_price": 28.0,
+      "rise_pct": 3.6667,
+      "duration_days": 119
+    },
+    {
+      "symbol": "3653.TW",
+      "start_date": "2025-08-05",
+      "end_date": "2025-12-08",
+      "start_price": 1265.0,
+      "end_price": 3140.0,
+      "rise_pct": 1.4822,
+      "duration_days": 85
+    },
+    {
+      "symbol": "3665.TW",
+      "start_date": "2025-07-23",
+      "end_date": "2025-12-02",
+      "start_price": 808.0,
+      "end_price": 1740.0,
+      "rise_pct": 1.1535,
+      "duration_days": 89
+    },
+    {
+      "symbol": "3665.TW",
+      "start_date": "2025-09-26",
+      "end_date": "2026-01-06",
+      "start_price": 971.0,
+      "end_price": 1640.0,
+      "rise_pct": 0.689,
+      "duration_days": 66
+    },
+    {
+      "symbol": "3673.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-19",
+      "start_price": 28.74,
+      "end_price": 46.3,
+      "rise_pct": 0.6112,
+      "duration_days": 143
+    },
+    {
+      "symbol": "3701.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-29",
+      "start_price": 30.3,
+      "end_price": 50.05,
+      "rise_pct": 0.6519,
+      "duration_days": 48
+    },
+    {
+      "symbol": "3701.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-04",
+      "start_price": 29.25,
+      "end_price": 74.5,
+      "rise_pct": 1.547,
+      "duration_days": 63
     },
     {
       "symbol": "3711.TW",
@@ -858,6 +1605,24 @@
       "duration_days": 31
     },
     {
+      "symbol": "4576.TW",
+      "start_date": "2025-11-19",
+      "end_date": "2026-01-29",
+      "start_price": 98.0,
+      "end_price": 133.0,
+      "rise_pct": 0.3571,
+      "duration_days": 49
+    },
+    {
+      "symbol": "4720.TW",
+      "start_date": "2025-11-18",
+      "end_date": "2026-01-08",
+      "start_price": 13.2,
+      "end_price": 19.55,
+      "rise_pct": 0.4811,
+      "duration_days": 35
+    },
+    {
       "symbol": "4739.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-01-21",
@@ -885,6 +1650,42 @@
       "duration_days": 60
     },
     {
+      "symbol": "4927.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-25",
+      "start_price": 20.4,
+      "end_price": 30.1,
+      "rise_pct": 0.4755,
+      "duration_days": 44
+    },
+    {
+      "symbol": "4927.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-18",
+      "start_price": 20.2,
+      "end_price": 53.8,
+      "rise_pct": 1.6634,
+      "duration_days": 72
+    },
+    {
+      "symbol": "4949.TW",
+      "start_date": "2025-11-10",
+      "end_date": "2026-01-27",
+      "start_price": 33.61,
+      "end_price": 50.81,
+      "rise_pct": 0.5116,
+      "duration_days": 54
+    },
+    {
+      "symbol": "4958.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-02-24",
+      "start_price": 95.7,
+      "end_price": 214.0,
+      "rise_pct": 1.2362,
+      "duration_days": 162
+    },
+    {
       "symbol": "4967.TW",
       "start_date": "2025-06-02",
       "end_date": "2026-03-20",
@@ -901,6 +1702,24 @@
       "end_price": 266.5,
       "rise_pct": 2.9797,
       "duration_days": 110
+    },
+    {
+      "symbol": "4977.TW",
+      "start_date": "2025-06-03",
+      "end_date": "2025-12-26",
+      "start_price": 76.75,
+      "end_price": 149.5,
+      "rise_pct": 0.9478,
+      "duration_days": 142
+    },
+    {
+      "symbol": "4977.TW",
+      "start_date": "2025-07-08",
+      "end_date": "2025-09-09",
+      "start_price": 81.6,
+      "end_price": 133.0,
+      "rise_pct": 0.6299,
+      "duration_days": 44
     },
     {
       "symbol": "4989.TW",
@@ -921,6 +1740,51 @@
       "duration_days": 29
     },
     {
+      "symbol": "5243.TW",
+      "start_date": "2025-07-08",
+      "end_date": "2025-10-30",
+      "start_price": 52.16,
+      "end_price": 95.2,
+      "rise_pct": 0.825,
+      "duration_days": 77
+    },
+    {
+      "symbol": "5243.TW",
+      "start_date": "2025-10-13",
+      "end_date": "2026-01-29",
+      "start_price": 66.0,
+      "end_price": 92.8,
+      "rise_pct": 0.4061,
+      "duration_days": 75
+    },
+    {
+      "symbol": "5288.TW",
+      "start_date": "2025-09-23",
+      "end_date": "2026-01-16",
+      "start_price": 108.0,
+      "end_price": 162.5,
+      "rise_pct": 0.5046,
+      "duration_days": 77
+    },
+    {
+      "symbol": "5292.TW",
+      "start_date": "2025-12-22",
+      "end_date": "2026-01-22",
+      "start_price": 135.5,
+      "end_price": 227.5,
+      "rise_pct": 0.679,
+      "duration_days": 21
+    },
+    {
+      "symbol": "5515.TW",
+      "start_date": "2025-09-02",
+      "end_date": "2026-01-12",
+      "start_price": 23.3,
+      "end_price": 40.5,
+      "rise_pct": 0.7382,
+      "duration_days": 88
+    },
+    {
       "symbol": "6005.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-02-26",
@@ -930,6 +1794,105 @@
       "duration_days": 164
     },
     {
+      "symbol": "6108.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-18",
+      "start_price": 12.6,
+      "end_price": 17.7,
+      "rise_pct": 0.4048,
+      "duration_days": 73
+    },
+    {
+      "symbol": "6120.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-28",
+      "start_price": 9.9,
+      "end_price": 14.5,
+      "rise_pct": 0.4642,
+      "duration_days": 150
+    },
+    {
+      "symbol": "6120.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2025-12-10",
+      "start_price": 10.05,
+      "end_price": 14.15,
+      "rise_pct": 0.408,
+      "duration_days": 12
+    },
+    {
+      "symbol": "6133.TW",
+      "start_date": "2025-06-16",
+      "end_date": "2026-03-05",
+      "start_price": 13.17,
+      "end_price": 30.05,
+      "rise_pct": 1.2809,
+      "duration_days": 173
+    },
+    {
+      "symbol": "6133.TW",
+      "start_date": "2025-11-10",
+      "end_date": "2026-01-28",
+      "start_price": 15.05,
+      "end_price": 30.0,
+      "rise_pct": 0.9934,
+      "duration_days": 55
+    },
+    {
+      "symbol": "6139.TW",
+      "start_date": "2025-08-20",
+      "end_date": "2026-01-16",
+      "start_price": 306.08,
+      "end_price": 640.0,
+      "rise_pct": 1.0909,
+      "duration_days": 101
+    },
+    {
+      "symbol": "6139.TW",
+      "start_date": "2025-09-26",
+      "end_date": "2025-12-17",
+      "start_price": 343.5,
+      "end_price": 619.0,
+      "rise_pct": 0.802,
+      "duration_days": 54
+    },
+    {
+      "symbol": "6141.TW",
+      "start_date": "2025-06-16",
+      "end_date": "2025-08-15",
+      "start_price": 10.8,
+      "end_price": 15.4,
+      "rise_pct": 0.4259,
+      "duration_days": 43
+    },
+    {
+      "symbol": "6141.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-19",
+      "start_price": 10.15,
+      "end_price": 28.55,
+      "rise_pct": 1.8128,
+      "duration_days": 74
+    },
+    {
+      "symbol": "6152.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-06",
+      "start_price": 8.16,
+      "end_price": 11.1,
+      "rise_pct": 0.3603,
+      "duration_days": 31
+    },
+    {
+      "symbol": "6152.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-04",
+      "start_price": 8.01,
+      "end_price": 22.2,
+      "rise_pct": 1.7715,
+      "duration_days": 62
+    },
+    {
       "symbol": "6153.TW",
       "start_date": "2025-06-23",
       "end_date": "2026-01-27",
@@ -937,6 +1900,105 @@
       "end_price": 20.15,
       "rise_pct": 0.9659,
       "duration_days": 149
+    },
+    {
+      "symbol": "6155.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-23",
+      "start_price": 20.75,
+      "end_price": 64.4,
+      "rise_pct": 2.1029,
+      "duration_days": 147
+    },
+    {
+      "symbol": "6164.TW",
+      "start_date": "2025-11-11",
+      "end_date": "2025-12-18",
+      "start_price": 9.1,
+      "end_price": 14.2,
+      "rise_pct": 0.5604,
+      "duration_days": 27
+    },
+    {
+      "symbol": "6168.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-09-02",
+      "start_price": 14.9,
+      "end_price": 25.2,
+      "rise_pct": 0.6913,
+      "duration_days": 50
+    },
+    {
+      "symbol": "6168.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-28",
+      "start_price": 18.0,
+      "end_price": 25.05,
+      "rise_pct": 0.3917,
+      "duration_days": 46
+    },
+    {
+      "symbol": "6192.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-02",
+      "start_price": 94.4,
+      "end_price": 134.0,
+      "rise_pct": 0.4195,
+      "duration_days": 165
+    },
+    {
+      "symbol": "6196.TW",
+      "start_date": "2025-06-09",
+      "end_date": "2026-01-16",
+      "start_price": 161.68,
+      "end_price": 335.0,
+      "rise_pct": 1.0719,
+      "duration_days": 152
+    },
+    {
+      "symbol": "6196.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-26",
+      "start_price": 218.5,
+      "end_price": 310.0,
+      "rise_pct": 0.4188,
+      "duration_days": 60
+    },
+    {
+      "symbol": "6205.TW",
+      "start_date": "2025-12-11",
+      "end_date": "2026-01-14",
+      "start_price": 36.8,
+      "end_price": 66.5,
+      "rise_pct": 0.8071,
+      "duration_days": 22
+    },
+    {
+      "symbol": "6209.TW",
+      "start_date": "2025-07-07",
+      "end_date": "2026-01-27",
+      "start_price": 23.85,
+      "end_price": 80.5,
+      "rise_pct": 2.3753,
+      "duration_days": 139
+    },
+    {
+      "symbol": "6209.TW",
+      "start_date": "2025-09-24",
+      "end_date": "2025-12-29",
+      "start_price": 34.5,
+      "end_price": 70.5,
+      "rise_pct": 1.0435,
+      "duration_days": 63
+    },
+    {
+      "symbol": "6213.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-19",
+      "start_price": 80.81,
+      "end_price": 141.5,
+      "rise_pct": 0.7511,
+      "duration_days": 40
     },
     {
       "symbol": "6225.TW",
@@ -1020,6 +2082,42 @@
       "duration_days": 72
     },
     {
+      "symbol": "6405.TW",
+      "start_date": "2025-08-13",
+      "end_date": "2026-02-26",
+      "start_price": 23.3,
+      "end_price": 37.3,
+      "rise_pct": 0.6009,
+      "duration_days": 128
+    },
+    {
+      "symbol": "6405.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-19",
+      "start_price": 24.3,
+      "end_price": 33.15,
+      "rise_pct": 0.3642,
+      "duration_days": 38
+    },
+    {
+      "symbol": "6415.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-28",
+      "start_price": 172.98,
+      "end_price": 309.29,
+      "rise_pct": 0.788,
+      "duration_days": 45
+    },
+    {
+      "symbol": "6426.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-25",
+      "start_price": 64.4,
+      "end_price": 195.0,
+      "rise_pct": 2.028,
+      "duration_days": 59
+    },
+    {
       "symbol": "6442.TW",
       "start_date": "2025-06-03",
       "end_date": "2026-03-03",
@@ -1036,6 +2134,51 @@
       "end_price": 1020.0,
       "rise_pct": 1.4239,
       "duration_days": 42
+    },
+    {
+      "symbol": "6443.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-17",
+      "start_price": 11.95,
+      "end_price": 56.5,
+      "rise_pct": 3.728,
+      "duration_days": 71
+    },
+    {
+      "symbol": "6446.TW",
+      "start_date": "2025-05-23",
+      "end_date": "2026-02-03",
+      "start_price": 427.11,
+      "end_price": 780.0,
+      "rise_pct": 0.8262,
+      "duration_days": 174
+    },
+    {
+      "symbol": "6451.TW",
+      "start_date": "2025-06-03",
+      "end_date": "2026-02-05",
+      "start_price": 119.7,
+      "end_price": 222.0,
+      "rise_pct": 0.8546,
+      "duration_days": 170
+    },
+    {
+      "symbol": "6505.TW",
+      "start_date": "2025-07-11",
+      "end_date": "2026-03-09",
+      "start_price": 34.9,
+      "end_price": 68.2,
+      "rise_pct": 0.9542,
+      "duration_days": 156
+    },
+    {
+      "symbol": "6505.TW",
+      "start_date": "2025-10-03",
+      "end_date": "2025-11-20",
+      "start_price": 38.35,
+      "end_price": 57.2,
+      "rise_pct": 0.4915,
+      "duration_days": 31
     },
     {
       "symbol": "6515.TW",
@@ -1065,6 +2208,42 @@
       "duration_days": 100
     },
     {
+      "symbol": "6655.TW",
+      "start_date": "2025-11-20",
+      "end_date": "2026-03-03",
+      "start_price": 99.1,
+      "end_price": 134.0,
+      "rise_pct": 0.3522,
+      "duration_days": 63
+    },
+    {
+      "symbol": "6672.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-09-05",
+      "start_price": 65.51,
+      "end_price": 118.39,
+      "rise_pct": 0.8071,
+      "duration_days": 53
+    },
+    {
+      "symbol": "6691.TW",
+      "start_date": "2025-06-06",
+      "end_date": "2026-03-02",
+      "start_price": 332.52,
+      "end_price": 705.0,
+      "rise_pct": 1.1202,
+      "duration_days": 176
+    },
+    {
+      "symbol": "6691.TW",
+      "start_date": "2025-11-12",
+      "end_date": "2025-12-16",
+      "start_price": 427.5,
+      "end_price": 642.0,
+      "rise_pct": 0.5018,
+      "duration_days": 24
+    },
+    {
       "symbol": "6706.TW",
       "start_date": "2025-07-08",
       "end_date": "2025-12-31",
@@ -1081,6 +2260,24 @@
       "end_price": 144.0,
       "rise_pct": 1.4658,
       "duration_days": 125
+    },
+    {
+      "symbol": "6753.TW",
+      "start_date": "2025-07-07",
+      "end_date": "2025-09-11",
+      "start_price": 90.02,
+      "end_price": 214.0,
+      "rise_pct": 1.3773,
+      "duration_days": 47
+    },
+    {
+      "symbol": "6753.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-22",
+      "start_price": 109.5,
+      "end_price": 164.5,
+      "rise_pct": 0.5023,
+      "duration_days": 42
     },
     {
       "symbol": "6770.TW",
@@ -1101,6 +2298,24 @@
       "duration_days": 73
     },
     {
+      "symbol": "6776.TW",
+      "start_date": "2025-12-30",
+      "end_date": "2026-03-19",
+      "start_price": 48.45,
+      "end_price": 75.5,
+      "rise_pct": 0.5583,
+      "duration_days": 48
+    },
+    {
+      "symbol": "6789.TW",
+      "start_date": "2025-06-16",
+      "end_date": "2026-03-03",
+      "start_price": 195.91,
+      "end_price": 383.5,
+      "rise_pct": 0.9575,
+      "duration_days": 171
+    },
+    {
       "symbol": "6805.TW",
       "start_date": "2025-09-26",
       "end_date": "2025-11-12",
@@ -1110,6 +2325,51 @@
       "duration_days": 29
     },
     {
+      "symbol": "6830.TW",
+      "start_date": "2025-07-08",
+      "end_date": "2025-09-12",
+      "start_price": 114.83,
+      "end_price": 186.72,
+      "rise_pct": 0.626,
+      "duration_days": 47
+    },
+    {
+      "symbol": "6862.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-02",
+      "start_price": 120.66,
+      "end_price": 238.0,
+      "rise_pct": 0.9725,
+      "duration_days": 165
+    },
+    {
+      "symbol": "6862.TW",
+      "start_date": "2025-07-22",
+      "end_date": "2025-10-29",
+      "start_price": 126.5,
+      "end_price": 224.0,
+      "rise_pct": 0.7708,
+      "duration_days": 66
+    },
+    {
+      "symbol": "6862.TW",
+      "start_date": "2025-08-27",
+      "end_date": "2026-01-21",
+      "start_price": 129.5,
+      "end_price": 207.0,
+      "rise_pct": 0.5985,
+      "duration_days": 99
+    },
+    {
+      "symbol": "6936.TW",
+      "start_date": "2025-08-19",
+      "end_date": "2025-10-27",
+      "start_price": 34.15,
+      "end_price": 46.2,
+      "rise_pct": 0.3529,
+      "duration_days": 45
+    },
+    {
       "symbol": "6944.TW",
       "start_date": "2025-11-19",
       "end_date": "2026-01-16",
@@ -1117,6 +2377,33 @@
       "end_price": 803.0,
       "rise_pct": 0.5653,
       "duration_days": 40
+    },
+    {
+      "symbol": "7780.TW",
+      "start_date": "2025-10-28",
+      "end_date": "2026-01-23",
+      "start_price": 14.5,
+      "end_price": 29.4,
+      "rise_pct": 1.0274,
+      "duration_days": 55
+    },
+    {
+      "symbol": "7795.TW",
+      "start_date": "2025-06-03",
+      "end_date": "2026-01-30",
+      "start_price": 120.0,
+      "end_price": 455.0,
+      "rise_pct": 2.7917,
+      "duration_days": 167
+    },
+    {
+      "symbol": "7795.TW",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-20",
+      "start_price": 192.0,
+      "end_price": 435.0,
+      "rise_pct": 1.2656,
+      "duration_days": 75
     },
     {
       "symbol": "7822.TW",
@@ -1164,49 +2451,13 @@
       "duration_days": 76
     },
     {
-      "symbol": "8046.TW",
-      "start_date": "2025-06-02",
-      "end_date": "2025-11-03",
-      "start_price": 96.94,
-      "end_price": 301.0,
-      "rise_pct": 2.1049,
-      "duration_days": 105
-    },
-    {
-      "symbol": "8103.TW",
+      "symbol": "8070.TW",
       "start_date": "2025-06-23",
-      "end_date": "2026-02-11",
-      "start_price": 47.81,
-      "end_price": 109.5,
-      "rise_pct": 1.2902,
-      "duration_days": 160
-    },
-    {
-      "symbol": "8103.TW",
-      "start_date": "2025-09-26",
-      "end_date": "2025-11-13",
-      "start_price": 56.78,
-      "end_price": 103.76,
-      "rise_pct": 0.8274,
-      "duration_days": 30
-    },
-    {
-      "symbol": "8131.TW",
-      "start_date": "2025-06-02",
-      "end_date": "2026-01-27",
-      "start_price": 24.2,
-      "end_price": 85.4,
-      "rise_pct": 2.5295,
-      "duration_days": 164
-    },
-    {
-      "symbol": "8131.TW",
-      "start_date": "2025-08-11",
-      "end_date": "2025-11-13",
-      "start_price": 24.9,
-      "end_price": 50.7,
-      "rise_pct": 1.0361,
-      "duration_days": 64
+      "end_date": "2025-10-09",
+      "start_price": 37.05,
+      "end_price": 50.88,
+      "rise_pct": 0.3732,
+      "duration_days": 75
     },
     {
       "symbol": "8150.TW",
@@ -1225,6 +2476,33 @@
       "end_price": 71.5,
       "rise_pct": 0.4103,
       "duration_days": 7
+    },
+    {
+      "symbol": "8210.TW",
+      "start_date": "2025-08-05",
+      "end_date": "2025-11-11",
+      "start_price": 473.5,
+      "end_price": 1110.0,
+      "rise_pct": 1.3442,
+      "duration_days": 66
+    },
+    {
+      "symbol": "8210.TW",
+      "start_date": "2025-09-02",
+      "end_date": "2025-11-12",
+      "start_price": 561.0,
+      "end_price": 1110.0,
+      "rise_pct": 0.9786,
+      "duration_days": 47
+    },
+    {
+      "symbol": "8210.TW",
+      "start_date": "2025-09-26",
+      "end_date": "2026-02-05",
+      "start_price": 572.0,
+      "end_price": 1085.0,
+      "rise_pct": 0.8969,
+      "duration_days": 88
     },
     {
       "symbol": "8271.TW",
@@ -1254,6 +2532,15 @@
       "duration_days": 5
     },
     {
+      "symbol": "8438.TW",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-02",
+      "start_price": 27.95,
+      "end_price": 76.3,
+      "rise_pct": 1.7299,
+      "duration_days": 60
+    },
+    {
       "symbol": "8996.TW",
       "start_date": "2025-07-08",
       "end_date": "2025-11-04",
@@ -1261,6 +2548,33 @@
       "end_price": 674.35,
       "rise_pct": 1.8191,
       "duration_days": 80
+    },
+    {
+      "symbol": "9918.TW",
+      "start_date": "2026-01-19",
+      "end_date": "2026-03-09",
+      "start_price": 39.0,
+      "end_price": 61.3,
+      "rise_pct": 0.5718,
+      "duration_days": 27
+    },
+    {
+      "symbol": "9933.TW",
+      "start_date": "2025-06-23",
+      "end_date": "2025-09-08",
+      "start_price": 22.03,
+      "end_price": 36.3,
+      "rise_pct": 0.6474,
+      "duration_days": 54
+    },
+    {
+      "symbol": "6924.TW",
+      "start_date": "2025-10-16",
+      "end_date": "2026-01-05",
+      "start_price": 46.95,
+      "end_price": 82.6,
+      "rise_pct": 0.7593,
+      "duration_days": 52
     },
     {
       "symbol": "7610.TW",
@@ -1308,6 +2622,33 @@
       "duration_days": 155
     },
     {
+      "symbol": "1595.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-12-31",
+      "start_price": 29.26,
+      "end_price": 48.7,
+      "rise_pct": 0.6641,
+      "duration_days": 131
+    },
+    {
+      "symbol": "1785.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2025-12-26",
+      "start_price": 49.8,
+      "end_price": 70.6,
+      "rise_pct": 0.4177,
+      "duration_days": 117
+    },
+    {
+      "symbol": "1785.TWO",
+      "start_date": "2025-07-31",
+      "end_date": "2026-01-29",
+      "start_price": 49.9,
+      "end_price": 69.2,
+      "rise_pct": 0.3868,
+      "duration_days": 123
+    },
+    {
       "symbol": "1815.TWO",
       "start_date": "2025-07-08",
       "end_date": "2026-02-25",
@@ -1324,6 +2665,33 @@
       "end_price": 117.5,
       "rise_pct": 1.0154,
       "duration_days": 92
+    },
+    {
+      "symbol": "2740.TWO",
+      "start_date": "2025-11-05",
+      "end_date": "2026-02-05",
+      "start_price": 19.95,
+      "end_price": 47.45,
+      "rise_pct": 1.3784,
+      "duration_days": 64
+    },
+    {
+      "symbol": "2755.TWO",
+      "start_date": "2026-01-30",
+      "end_date": "2026-03-16",
+      "start_price": 111.0,
+      "end_price": 153.0,
+      "rise_pct": 0.3784,
+      "duration_days": 23
+    },
+    {
+      "symbol": "3081.TWO",
+      "start_date": "2025-06-06",
+      "end_date": "2025-08-19",
+      "start_price": 241.15,
+      "end_price": 532.0,
+      "rise_pct": 1.2061,
+      "duration_days": 51
     },
     {
       "symbol": "3086.TWO",
@@ -1353,6 +2721,42 @@
       "duration_days": 79
     },
     {
+      "symbol": "3114.TWO",
+      "start_date": "2025-06-03",
+      "end_date": "2025-12-31",
+      "start_price": 20.81,
+      "end_price": 28.8,
+      "rise_pct": 0.384,
+      "duration_days": 145
+    },
+    {
+      "symbol": "3131.TWO",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-16",
+      "start_price": 1320.0,
+      "end_price": 1925.0,
+      "rise_pct": 0.4583,
+      "duration_days": 37
+    },
+    {
+      "symbol": "3152.TWO",
+      "start_date": "2025-06-16",
+      "end_date": "2026-01-14",
+      "start_price": 104.03,
+      "end_price": 183.0,
+      "rise_pct": 0.7592,
+      "duration_days": 145
+    },
+    {
+      "symbol": "3162.TWO",
+      "start_date": "2025-07-22",
+      "end_date": "2025-11-10",
+      "start_price": 39.91,
+      "end_price": 72.5,
+      "rise_pct": 0.8167,
+      "duration_days": 74
+    },
+    {
       "symbol": "3163.TWO",
       "start_date": "2025-08-11",
       "end_date": "2026-01-05",
@@ -1360,6 +2764,24 @@
       "end_price": 428.5,
       "rise_pct": 1.6128,
       "duration_days": 99
+    },
+    {
+      "symbol": "3188.TWO",
+      "start_date": "2025-07-31",
+      "end_date": "2026-03-11",
+      "start_price": 23.65,
+      "end_price": 32.21,
+      "rise_pct": 0.3619,
+      "duration_days": 144
+    },
+    {
+      "symbol": "3221.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-10-21",
+      "start_price": 17.04,
+      "end_price": 25.5,
+      "rise_pct": 0.4966,
+      "duration_days": 82
     },
     {
       "symbol": "3234.TWO",
@@ -1378,6 +2800,15 @@
       "end_price": 51.9,
       "rise_pct": 0.5493,
       "duration_days": 22
+    },
+    {
+      "symbol": "3236.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-15",
+      "start_price": 14.9,
+      "end_price": 38.75,
+      "rise_pct": 1.6014,
+      "duration_days": 141
     },
     {
       "symbol": "3260.TWO",
@@ -1416,6 +2847,33 @@
       "duration_days": 50
     },
     {
+      "symbol": "3265.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-27",
+      "start_price": 87.8,
+      "end_price": 156.0,
+      "rise_pct": 0.7768,
+      "duration_days": 45
+    },
+    {
+      "symbol": "3289.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-29",
+      "start_price": 96.71,
+      "end_price": 145.83,
+      "rise_pct": 0.5079,
+      "duration_days": 47
+    },
+    {
+      "symbol": "3357.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2026-03-02",
+      "start_price": 90.7,
+      "end_price": 201.5,
+      "rise_pct": 1.2216,
+      "duration_days": 154
+    },
+    {
       "symbol": "3363.TWO",
       "start_date": "2025-08-11",
       "end_date": "2026-01-02",
@@ -1425,22 +2883,76 @@
       "duration_days": 98
     },
     {
-      "symbol": "3372.TWO",
-      "start_date": "2025-06-23",
-      "end_date": "2026-01-20",
-      "start_price": 12.6,
-      "end_price": 26.2,
-      "rise_pct": 1.0794,
-      "duration_days": 144
+      "symbol": "3374.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2026-03-02",
+      "start_price": 127.0,
+      "end_price": 196.5,
+      "rise_pct": 0.5472,
+      "duration_days": 63
     },
     {
-      "symbol": "3372.TWO",
-      "start_date": "2025-07-30",
-      "end_date": "2026-02-26",
-      "start_price": 12.65,
-      "end_price": 26.0,
-      "rise_pct": 1.0553,
-      "duration_days": 137
+      "symbol": "3374.TWO",
+      "start_date": "2025-12-18",
+      "end_date": "2026-01-27",
+      "start_price": 130.0,
+      "end_price": 195.0,
+      "rise_pct": 0.5,
+      "duration_days": 26
+    },
+    {
+      "symbol": "3430.TWO",
+      "start_date": "2025-07-22",
+      "end_date": "2026-03-18",
+      "start_price": 44.35,
+      "end_price": 89.0,
+      "rise_pct": 1.0068,
+      "duration_days": 156
+    },
+    {
+      "symbol": "3430.TWO",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-12",
+      "start_price": 54.5,
+      "end_price": 86.0,
+      "rise_pct": 0.578,
+      "duration_days": 33
+    },
+    {
+      "symbol": "3455.TWO",
+      "start_date": "2025-06-02",
+      "end_date": "2026-01-16",
+      "start_price": 77.34,
+      "end_price": 132.5,
+      "rise_pct": 0.7132,
+      "duration_days": 157
+    },
+    {
+      "symbol": "3489.TWO",
+      "start_date": "2025-07-31",
+      "end_date": "2025-12-19",
+      "start_price": 16.5,
+      "end_price": 24.8,
+      "rise_pct": 0.503,
+      "duration_days": 96
+    },
+    {
+      "symbol": "3490.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-19",
+      "start_price": 18.72,
+      "end_price": 27.65,
+      "rise_pct": 0.477,
+      "duration_days": 40
+    },
+    {
+      "symbol": "3490.TWO",
+      "start_date": "2025-07-29",
+      "end_date": "2026-01-21",
+      "start_price": 19.3,
+      "end_price": 27.65,
+      "rise_pct": 0.4326,
+      "duration_days": 119
     },
     {
       "symbol": "3491.TWO",
@@ -1450,6 +2962,33 @@
       "end_price": 1895.0,
       "rise_pct": 5.3272,
       "duration_days": 154
+    },
+    {
+      "symbol": "3498.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-20",
+      "start_price": 34.75,
+      "end_price": 59.5,
+      "rise_pct": 0.7122,
+      "duration_days": 41
+    },
+    {
+      "symbol": "3521.TWO",
+      "start_date": "2025-07-09",
+      "end_date": "2026-02-03",
+      "start_price": 10.9,
+      "end_price": 17.45,
+      "rise_pct": 0.6009,
+      "duration_days": 142
+    },
+    {
+      "symbol": "3521.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2025-11-28",
+      "start_price": 11.05,
+      "end_price": 16.5,
+      "rise_pct": 0.4932,
+      "duration_days": 7
     },
     {
       "symbol": "3555.TWO",
@@ -1468,6 +3007,105 @@
       "end_price": 101.0,
       "rise_pct": 1.3765,
       "duration_days": 63
+    },
+    {
+      "symbol": "3580.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-16",
+      "start_price": 54.0,
+      "end_price": 76.2,
+      "rise_pct": 0.4111,
+      "duration_days": 38
+    },
+    {
+      "symbol": "3581.TWO",
+      "start_date": "2025-06-03",
+      "end_date": "2026-01-20",
+      "start_price": 29.09,
+      "end_price": 84.4,
+      "rise_pct": 1.9009,
+      "duration_days": 158
+    },
+    {
+      "symbol": "3581.TWO",
+      "start_date": "2025-08-04",
+      "end_date": "2025-10-21",
+      "start_price": 32.85,
+      "end_price": 67.2,
+      "rise_pct": 1.0457,
+      "duration_days": 53
+    },
+    {
+      "symbol": "3615.TWO",
+      "start_date": "2025-11-05",
+      "end_date": "2026-03-13",
+      "start_price": 20.8,
+      "end_price": 37.9,
+      "rise_pct": 0.8221,
+      "duration_days": 82
+    },
+    {
+      "symbol": "3663.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-24",
+      "start_price": 38.9,
+      "end_price": 80.6,
+      "rise_pct": 1.072,
+      "duration_days": 77
+    },
+    {
+      "symbol": "3663.TWO",
+      "start_date": "2025-12-19",
+      "end_date": "2026-01-16",
+      "start_price": 43.5,
+      "end_price": 73.5,
+      "rise_pct": 0.6897,
+      "duration_days": 18
+    },
+    {
+      "symbol": "3680.TWO",
+      "start_date": "2025-08-11",
+      "end_date": "2026-01-28",
+      "start_price": 275.46,
+      "end_price": 462.0,
+      "rise_pct": 0.6772,
+      "duration_days": 116
+    },
+    {
+      "symbol": "3689.TWO",
+      "start_date": "2025-07-07",
+      "end_date": "2026-01-07",
+      "start_price": 85.19,
+      "end_price": 133.5,
+      "rise_pct": 0.567,
+      "duration_days": 125
+    },
+    {
+      "symbol": "3691.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-03",
+      "start_price": 61.6,
+      "end_price": 144.5,
+      "rise_pct": 1.3458,
+      "duration_days": 166
+    },
+    {
+      "symbol": "3691.TWO",
+      "start_date": "2025-11-10",
+      "end_date": "2026-01-27",
+      "start_price": 63.6,
+      "end_price": 138.0,
+      "rise_pct": 1.1698,
+      "duration_days": 54
+    },
+    {
+      "symbol": "3693.TWO",
+      "start_date": "2025-10-03",
+      "end_date": "2025-11-03",
+      "start_price": 234.5,
+      "end_price": 386.0,
+      "rise_pct": 0.6461,
+      "duration_days": 18
     },
     {
       "symbol": "3709.TWO",
@@ -1497,22 +3135,76 @@
       "duration_days": 50
     },
     {
-      "symbol": "4130.TWO",
-      "start_date": "2025-07-30",
-      "end_date": "2026-01-13",
-      "start_price": 17.55,
-      "end_price": 38.89,
-      "rise_pct": 1.2151,
-      "duration_days": 112
+      "symbol": "4121.TWO",
+      "start_date": "2025-07-16",
+      "end_date": "2026-02-26",
+      "start_price": 13.8,
+      "end_price": 20.85,
+      "rise_pct": 0.5109,
+      "duration_days": 147
     },
     {
-      "symbol": "4130.TWO",
-      "start_date": "2025-09-15",
+      "symbol": "4167.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2026-01-26",
+      "start_price": 16.45,
+      "end_price": 22.6,
+      "rise_pct": 0.3739,
+      "duration_days": 72
+    },
+    {
+      "symbol": "4171.TWO",
+      "start_date": "2025-10-21",
+      "end_date": "2025-10-29",
+      "start_price": 16.95,
+      "end_price": 26.9,
+      "rise_pct": 0.587,
+      "duration_days": 5
+    },
+    {
+      "symbol": "4533.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-29",
+      "start_price": 19.25,
+      "end_price": 41.85,
+      "rise_pct": 1.174,
+      "duration_days": 47
+    },
+    {
+      "symbol": "4533.TWO",
+      "start_date": "2026-01-05",
+      "end_date": "2026-03-05",
+      "start_price": 21.1,
+      "end_price": 40.9,
+      "rise_pct": 0.9384,
+      "duration_days": 35
+    },
+    {
+      "symbol": "4543.TWO",
+      "start_date": "2025-11-06",
+      "end_date": "2026-01-22",
+      "start_price": 21.4,
+      "end_price": 35.45,
+      "rise_pct": 0.6565,
+      "duration_days": 53
+    },
+    {
+      "symbol": "4556.TWO",
+      "start_date": "2025-11-04",
+      "end_date": "2026-01-16",
+      "start_price": 22.3,
+      "end_price": 34.3,
+      "rise_pct": 0.5381,
+      "duration_days": 51
+    },
+    {
+      "symbol": "4556.TWO",
+      "start_date": "2025-12-15",
       "end_date": "2026-03-17",
-      "start_price": 18.4,
-      "end_price": 36.0,
-      "rise_pct": 0.9565,
-      "duration_days": 117
+      "start_price": 23.0,
+      "end_price": 31.45,
+      "rise_pct": 0.3674,
+      "duration_days": 56
     },
     {
       "symbol": "4577.TWO",
@@ -1531,6 +3223,15 @@
       "end_price": 43.4,
       "rise_pct": 1.2487,
       "duration_days": 40
+    },
+    {
+      "symbol": "4716.TWO",
+      "start_date": "2025-08-11",
+      "end_date": "2025-09-30",
+      "start_price": 13.32,
+      "end_price": 18.5,
+      "rise_pct": 0.389,
+      "duration_days": 35
     },
     {
       "symbol": "4760.TWO",
@@ -1569,6 +3270,42 @@
       "duration_days": 32
     },
     {
+      "symbol": "4903.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2025-12-11",
+      "start_price": 22.05,
+      "end_price": 52.0,
+      "rise_pct": 1.3583,
+      "duration_days": 107
+    },
+    {
+      "symbol": "4909.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-03",
+      "start_price": 39.15,
+      "end_price": 74.5,
+      "rise_pct": 0.9029,
+      "duration_days": 62
+    },
+    {
+      "symbol": "4939.TWO",
+      "start_date": "2025-06-16",
+      "end_date": "2026-01-23",
+      "start_price": 18.65,
+      "end_price": 54.9,
+      "rise_pct": 1.9437,
+      "duration_days": 152
+    },
+    {
+      "symbol": "4939.TWO",
+      "start_date": "2025-08-12",
+      "end_date": "2025-12-10",
+      "start_price": 19.05,
+      "end_price": 43.0,
+      "rise_pct": 1.2572,
+      "duration_days": 82
+    },
+    {
       "symbol": "4971.TWO",
       "start_date": "2025-10-13",
       "end_date": "2026-03-03",
@@ -1594,6 +3331,24 @@
       "end_price": 58.05,
       "rise_pct": 0.8065,
       "duration_days": 31
+    },
+    {
+      "symbol": "4979.TWO",
+      "start_date": "2025-06-03",
+      "end_date": "2026-03-03",
+      "start_price": 150.73,
+      "end_price": 504.0,
+      "rise_pct": 2.3437,
+      "duration_days": 180
+    },
+    {
+      "symbol": "4979.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2026-01-02",
+      "start_price": 175.03,
+      "end_price": 336.0,
+      "rise_pct": 0.9197,
+      "duration_days": 121
     },
     {
       "symbol": "4991.TWO",
@@ -1686,6 +3441,15 @@
       "duration_days": 8
     },
     {
+      "symbol": "5347.TWO",
+      "start_date": "2025-06-02",
+      "end_date": "2026-01-28",
+      "start_price": 75.76,
+      "end_price": 171.0,
+      "rise_pct": 1.2572,
+      "duration_days": 165
+    },
+    {
       "symbol": "5351.TWO",
       "start_date": "2025-06-03",
       "end_date": "2026-03-19",
@@ -1731,6 +3495,24 @@
       "duration_days": 64
     },
     {
+      "symbol": "5425.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-22",
+      "start_price": 42.78,
+      "end_price": 73.7,
+      "rise_pct": 0.7227,
+      "duration_days": 146
+    },
+    {
+      "symbol": "5425.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2025-10-21",
+      "start_price": 47.2,
+      "end_price": 65.4,
+      "rise_pct": 0.3856,
+      "duration_days": 6
+    },
+    {
       "symbol": "5498.TWO",
       "start_date": "2025-06-17",
       "end_date": "2026-01-19",
@@ -1765,6 +3547,15 @@
       "end_price": 27.55,
       "rise_pct": 1.4598,
       "duration_days": 151
+    },
+    {
+      "symbol": "6015.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-26",
+      "start_price": 9.88,
+      "end_price": 14.87,
+      "rise_pct": 0.5049,
+      "duration_days": 60
     },
     {
       "symbol": "6016.TWO",
@@ -1812,6 +3603,42 @@
       "duration_days": 109
     },
     {
+      "symbol": "6109.TWO",
+      "start_date": "2025-08-18",
+      "end_date": "2025-10-20",
+      "start_price": 9.71,
+      "end_price": 14.55,
+      "rise_pct": 0.4985,
+      "duration_days": 42
+    },
+    {
+      "symbol": "6109.TWO",
+      "start_date": "2025-10-08",
+      "end_date": "2026-02-05",
+      "start_price": 10.0,
+      "end_price": 14.2,
+      "rise_pct": 0.42,
+      "duration_days": 82
+    },
+    {
+      "symbol": "6124.TWO",
+      "start_date": "2025-06-19",
+      "end_date": "2025-07-16",
+      "start_price": 24.15,
+      "end_price": 38.4,
+      "rise_pct": 0.5901,
+      "duration_days": 19
+    },
+    {
+      "symbol": "6124.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-04",
+      "start_price": 23.3,
+      "end_price": 41.6,
+      "rise_pct": 0.7854,
+      "duration_days": 63
+    },
+    {
       "symbol": "6127.TWO",
       "start_date": "2025-09-03",
       "end_date": "2026-01-15",
@@ -1821,13 +3648,139 @@
       "duration_days": 90
     },
     {
-      "symbol": "6210.TWO",
-      "start_date": "2025-09-08",
-      "end_date": "2025-10-22",
-      "start_price": 16.1,
-      "end_price": 22.65,
-      "rise_pct": 0.4068,
+      "symbol": "6129.TWO",
+      "start_date": "2025-06-24",
+      "end_date": "2026-01-23",
+      "start_price": 9.6,
+      "end_price": 19.0,
+      "rise_pct": 0.9792,
+      "duration_days": 146
+    },
+    {
+      "symbol": "6129.TWO",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-19",
+      "start_price": 13.1,
+      "end_price": 18.15,
+      "rise_pct": 0.3855,
+      "duration_days": 73
+    },
+    {
+      "symbol": "6134.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-05",
+      "start_price": 18.12,
+      "end_price": 35.5,
+      "rise_pct": 0.9597,
+      "duration_days": 168
+    },
+    {
+      "symbol": "6134.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2026-01-16",
+      "start_price": 21.0,
+      "end_price": 35.0,
+      "rise_pct": 0.6667,
+      "duration_days": 40
+    },
+    {
+      "symbol": "6138.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-29",
+      "start_price": 150.88,
+      "end_price": 278.0,
+      "rise_pct": 0.8425,
+      "duration_days": 151
+    },
+    {
+      "symbol": "6138.TWO",
+      "start_date": "2025-07-31",
+      "end_date": "2025-10-03",
+      "start_price": 168.0,
+      "end_price": 248.5,
+      "rise_pct": 0.4792,
+      "duration_days": 44
+    },
+    {
+      "symbol": "6138.TWO",
+      "start_date": "2025-09-02",
+      "end_date": "2025-11-04",
+      "start_price": 174.0,
+      "end_price": 247.5,
+      "rise_pct": 0.4224,
+      "duration_days": 41
+    },
+    {
+      "symbol": "6163.TWO",
+      "start_date": "2025-06-11",
+      "end_date": "2026-01-20",
+      "start_price": 19.64,
+      "end_price": 76.6,
+      "rise_pct": 2.9004,
+      "duration_days": 152
+    },
+    {
+      "symbol": "6173.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-15",
+      "start_price": 33.67,
+      "end_price": 80.4,
+      "rise_pct": 1.3875,
+      "duration_days": 141
+    },
+    {
+      "symbol": "6173.TWO",
+      "start_date": "2025-08-11",
+      "end_date": "2025-11-20",
+      "start_price": 37.6,
+      "end_price": 74.4,
+      "rise_pct": 0.9787,
+      "duration_days": 69
+    },
+    {
+      "symbol": "6175.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-05",
+      "start_price": 31.28,
+      "end_price": 59.9,
+      "rise_pct": 0.915,
+      "duration_days": 133
+    },
+    {
+      "symbol": "6175.TWO",
+      "start_date": "2025-09-11",
+      "end_date": "2025-10-28",
+      "start_price": 36.3,
+      "end_price": 56.3,
+      "rise_pct": 0.551,
       "duration_days": 29
+    },
+    {
+      "symbol": "6190.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2026-01-27",
+      "start_price": 35.97,
+      "end_price": 59.5,
+      "rise_pct": 0.654,
+      "duration_days": 138
+    },
+    {
+      "symbol": "6208.TWO",
+      "start_date": "2025-06-20",
+      "end_date": "2025-08-18",
+      "start_price": 41.6,
+      "end_price": 56.4,
+      "rise_pct": 0.3558,
+      "duration_days": 40
+    },
+    {
+      "symbol": "6218.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2025-12-26",
+      "start_price": 17.7,
+      "end_price": 28.2,
+      "rise_pct": 0.5932,
+      "duration_days": 26
     },
     {
       "symbol": "6220.TWO",
@@ -1846,6 +3799,51 @@
       "end_price": 2450.0,
       "rise_pct": 1.4898,
       "duration_days": 99
+    },
+    {
+      "symbol": "6233.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-19",
+      "start_price": 17.95,
+      "end_price": 31.0,
+      "rise_pct": 0.727,
+      "duration_days": 74
+    },
+    {
+      "symbol": "6234.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-08-05",
+      "start_price": 20.16,
+      "end_price": 34.82,
+      "rise_pct": 0.7268,
+      "duration_days": 30
+    },
+    {
+      "symbol": "6234.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2025-12-31",
+      "start_price": 19.85,
+      "end_price": 31.8,
+      "rise_pct": 0.602,
+      "duration_days": 27
+    },
+    {
+      "symbol": "6244.TWO",
+      "start_date": "2025-11-24",
+      "end_date": "2026-03-03",
+      "start_price": 15.0,
+      "end_price": 39.1,
+      "rise_pct": 1.6067,
+      "duration_days": 61
+    },
+    {
+      "symbol": "6261.TWO",
+      "start_date": "2025-06-02",
+      "end_date": "2026-02-26",
+      "start_price": 56.63,
+      "end_price": 77.0,
+      "rise_pct": 0.3598,
+      "duration_days": 179
     },
     {
       "symbol": "6265.TWO",
@@ -1884,6 +3882,114 @@
       "duration_days": 66
     },
     {
+      "symbol": "6284.TWO",
+      "start_date": "2025-08-20",
+      "end_date": "2026-01-15",
+      "start_price": 60.5,
+      "end_price": 97.7,
+      "rise_pct": 0.6149,
+      "duration_days": 100
+    },
+    {
+      "symbol": "6291.TWO",
+      "start_date": "2025-07-10",
+      "end_date": "2025-09-09",
+      "start_price": 80.57,
+      "end_price": 210.76,
+      "rise_pct": 1.6159,
+      "duration_days": 42
+    },
+    {
+      "symbol": "6291.TWO",
+      "start_date": "2025-08-21",
+      "end_date": "2025-12-29",
+      "start_price": 121.35,
+      "end_price": 207.32,
+      "rise_pct": 0.7085,
+      "duration_days": 87
+    },
+    {
+      "symbol": "6292.TWO",
+      "start_date": "2026-02-09",
+      "end_date": "2026-03-19",
+      "start_price": 39.1,
+      "end_price": 53.0,
+      "rise_pct": 0.3555,
+      "duration_days": 20
+    },
+    {
+      "symbol": "6411.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-10-31",
+      "start_price": 61.55,
+      "end_price": 105.5,
+      "rise_pct": 0.7141,
+      "duration_days": 89
+    },
+    {
+      "symbol": "6411.TWO",
+      "start_date": "2025-08-04",
+      "end_date": "2026-03-03",
+      "start_price": 63.9,
+      "end_price": 90.5,
+      "rise_pct": 0.4163,
+      "duration_days": 137
+    },
+    {
+      "symbol": "6419.TWO",
+      "start_date": "2025-08-18",
+      "end_date": "2025-12-26",
+      "start_price": 47.25,
+      "end_price": 95.0,
+      "rise_pct": 1.0106,
+      "duration_days": 89
+    },
+    {
+      "symbol": "6423.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2026-01-28",
+      "start_price": 69.12,
+      "end_price": 112.24,
+      "rise_pct": 0.6237,
+      "duration_days": 48
+    },
+    {
+      "symbol": "6425.TWO",
+      "start_date": "2025-07-09",
+      "end_date": "2025-12-22",
+      "start_price": 37.5,
+      "end_price": 95.8,
+      "rise_pct": 1.5547,
+      "duration_days": 113
+    },
+    {
+      "symbol": "6425.TWO",
+      "start_date": "2025-09-01",
+      "end_date": "2026-03-03",
+      "start_price": 50.7,
+      "end_price": 79.1,
+      "rise_pct": 0.5602,
+      "duration_days": 117
+    },
+    {
+      "symbol": "6432.TWO",
+      "start_date": "2025-07-15",
+      "end_date": "2026-01-21",
+      "start_price": 24.71,
+      "end_price": 40.95,
+      "rise_pct": 0.6574,
+      "duration_days": 129
+    },
+    {
+      "symbol": "6432.TWO",
+      "start_date": "2025-09-02",
+      "end_date": "2026-03-03",
+      "start_price": 25.1,
+      "end_price": 39.95,
+      "rise_pct": 0.5916,
+      "duration_days": 116
+    },
+    {
       "symbol": "6435.TWO",
       "start_date": "2025-06-23",
       "end_date": "2026-03-16",
@@ -1900,6 +4006,60 @@
       "end_price": 162.0,
       "rise_pct": 0.796,
       "duration_days": 105
+    },
+    {
+      "symbol": "6465.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2026-01-13",
+      "start_price": 14.33,
+      "end_price": 44.6,
+      "rise_pct": 2.1117,
+      "duration_days": 63
+    },
+    {
+      "symbol": "6470.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2026-01-23",
+      "start_price": 39.3,
+      "end_price": 54.8,
+      "rise_pct": 0.3944,
+      "duration_days": 71
+    },
+    {
+      "symbol": "6492.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-02-03",
+      "start_price": 32.0,
+      "end_price": 66.5,
+      "rise_pct": 1.0781,
+      "duration_days": 154
+    },
+    {
+      "symbol": "6492.TWO",
+      "start_date": "2025-09-01",
+      "end_date": "2026-03-23",
+      "start_price": 35.1,
+      "end_price": 59.4,
+      "rise_pct": 0.6923,
+      "duration_days": 131
+    },
+    {
+      "symbol": "6492.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2025-10-21",
+      "start_price": 37.3,
+      "end_price": 53.0,
+      "rise_pct": 0.4209,
+      "duration_days": 6
+    },
+    {
+      "symbol": "6494.TWO",
+      "start_date": "2025-09-01",
+      "end_date": "2026-03-03",
+      "start_price": 32.8,
+      "end_price": 50.8,
+      "rise_pct": 0.5488,
+      "duration_days": 117
     },
     {
       "symbol": "6510.TWO",
@@ -1920,6 +4080,60 @@
       "duration_days": 74
     },
     {
+      "symbol": "6530.TWO",
+      "start_date": "2025-06-02",
+      "end_date": "2025-08-29",
+      "start_price": 46.05,
+      "end_price": 74.3,
+      "rise_pct": 0.6134,
+      "duration_days": 63
+    },
+    {
+      "symbol": "6532.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-07-07",
+      "start_price": 56.4,
+      "end_price": 78.0,
+      "rise_pct": 0.383,
+      "duration_days": 10
+    },
+    {
+      "symbol": "6532.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-03-23",
+      "start_price": 49.05,
+      "end_price": 84.0,
+      "rise_pct": 0.7125,
+      "duration_days": 76
+    },
+    {
+      "symbol": "6548.TWO",
+      "start_date": "2025-08-20",
+      "end_date": "2026-01-28",
+      "start_price": 29.39,
+      "end_price": 64.37,
+      "rise_pct": 1.1907,
+      "duration_days": 109
+    },
+    {
+      "symbol": "6548.TWO",
+      "start_date": "2025-10-02",
+      "end_date": "2025-11-12",
+      "start_price": 32.86,
+      "end_price": 49.96,
+      "rise_pct": 0.5201,
+      "duration_days": 26
+    },
+    {
+      "symbol": "6568.TWO",
+      "start_date": "2025-06-03",
+      "end_date": "2025-07-03",
+      "start_price": 98.6,
+      "end_price": 148.0,
+      "rise_pct": 0.501,
+      "duration_days": 22
+    },
+    {
       "symbol": "6584.TWO",
       "start_date": "2025-06-02",
       "end_date": "2025-12-03",
@@ -1938,6 +4152,51 @@
       "duration_days": 74
     },
     {
+      "symbol": "6588.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-02",
+      "start_price": 25.9,
+      "end_price": 123.0,
+      "rise_pct": 3.749,
+      "duration_days": 165
+    },
+    {
+      "symbol": "6588.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2025-12-17",
+      "start_price": 26.55,
+      "end_price": 55.5,
+      "rise_pct": 1.0904,
+      "duration_days": 18
+    },
+    {
+      "symbol": "6613.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2025-09-01",
+      "start_price": 147.79,
+      "end_price": 226.03,
+      "rise_pct": 0.5294,
+      "duration_days": 49
+    },
+    {
+      "symbol": "6640.TWO",
+      "start_date": "2025-08-06",
+      "end_date": "2025-09-24",
+      "start_price": 603.0,
+      "end_price": 832.0,
+      "rise_pct": 0.3798,
+      "duration_days": 35
+    },
+    {
+      "symbol": "6640.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-13",
+      "start_price": 520.0,
+      "end_price": 867.0,
+      "rise_pct": 0.6673,
+      "duration_days": 35
+    },
+    {
       "symbol": "6651.TWO",
       "start_date": "2025-10-13",
       "end_date": "2026-03-03",
@@ -1947,13 +4206,40 @@
       "duration_days": 90
     },
     {
-      "symbol": "6654.TWO",
-      "start_date": "2025-10-17",
-      "end_date": "2025-11-06",
-      "start_price": 65.0,
-      "end_price": 99.8,
-      "rise_pct": 0.5354,
-      "duration_days": 13
+      "symbol": "6664.TWO",
+      "start_date": "2025-07-31",
+      "end_date": "2025-12-11",
+      "start_price": 209.5,
+      "end_price": 323.5,
+      "rise_pct": 0.5442,
+      "duration_days": 90
+    },
+    {
+      "symbol": "6664.TWO",
+      "start_date": "2025-11-18",
+      "end_date": "2026-01-05",
+      "start_price": 235.0,
+      "end_price": 323.5,
+      "rise_pct": 0.3766,
+      "duration_days": 32
+    },
+    {
+      "symbol": "6683.TWO",
+      "start_date": "2025-07-09",
+      "end_date": "2025-12-03",
+      "start_price": 318.5,
+      "end_price": 481.0,
+      "rise_pct": 0.5102,
+      "duration_days": 100
+    },
+    {
+      "symbol": "6683.TWO",
+      "start_date": "2025-08-12",
+      "end_date": "2025-09-01",
+      "start_price": 338.0,
+      "end_price": 461.0,
+      "rise_pct": 0.3639,
+      "duration_days": 14
     },
     {
       "symbol": "6693.TWO",
@@ -1963,6 +4249,51 @@
       "end_price": 99.5,
       "rise_pct": 0.9098,
       "duration_days": 98
+    },
+    {
+      "symbol": "6788.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-06",
+      "start_price": 197.0,
+      "end_price": 400.0,
+      "rise_pct": 1.0305,
+      "duration_days": 134
+    },
+    {
+      "symbol": "6823.TWO",
+      "start_date": "2025-06-20",
+      "end_date": "2025-12-24",
+      "start_price": 38.35,
+      "end_price": 92.8,
+      "rise_pct": 1.4198,
+      "duration_days": 128
+    },
+    {
+      "symbol": "6823.TWO",
+      "start_date": "2025-07-15",
+      "end_date": "2025-11-05",
+      "start_price": 38.4,
+      "end_price": 91.4,
+      "rise_pct": 1.3802,
+      "duration_days": 76
+    },
+    {
+      "symbol": "6859.TWO",
+      "start_date": "2025-11-18",
+      "end_date": "2026-03-10",
+      "start_price": 88.5,
+      "end_price": 134.5,
+      "rise_pct": 0.5198,
+      "duration_days": 70
+    },
+    {
+      "symbol": "6894.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-13",
+      "start_price": 156.86,
+      "end_price": 247.75,
+      "rise_pct": 0.5794,
+      "duration_days": 139
     },
     {
       "symbol": "6903.TWO",
@@ -1992,6 +4323,33 @@
       "duration_days": 31
     },
     {
+      "symbol": "6996.TWO",
+      "start_date": "2025-07-30",
+      "end_date": "2026-03-06",
+      "start_price": 131.0,
+      "end_price": 181.5,
+      "rise_pct": 0.3855,
+      "duration_days": 142
+    },
+    {
+      "symbol": "7556.TWO",
+      "start_date": "2025-06-16",
+      "end_date": "2025-08-29",
+      "start_price": 148.52,
+      "end_price": 206.0,
+      "rise_pct": 0.387,
+      "duration_days": 53
+    },
+    {
+      "symbol": "7709.TWO",
+      "start_date": "2025-08-26",
+      "end_date": "2026-02-09",
+      "start_price": 36.2,
+      "end_price": 76.2,
+      "rise_pct": 1.105,
+      "duration_days": 113
+    },
+    {
       "symbol": "7728.TWO",
       "start_date": "2025-06-02",
       "end_date": "2026-03-24",
@@ -2010,6 +4368,159 @@
       "duration_days": 141
     },
     {
+      "symbol": "7751.TWO",
+      "start_date": "2025-09-04",
+      "end_date": "2025-09-25",
+      "start_price": 431.76,
+      "end_price": 589.84,
+      "rise_pct": 0.3661,
+      "duration_days": 15
+    },
+    {
+      "symbol": "7751.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-14",
+      "start_price": 415.45,
+      "end_price": 909.95,
+      "rise_pct": 1.1902,
+      "duration_days": 36
+    },
+    {
+      "symbol": "7792.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-01-28",
+      "start_price": 186.5,
+      "end_price": 415.0,
+      "rise_pct": 1.2252,
+      "duration_days": 46
+    },
+    {
+      "symbol": "8027.TWO",
+      "start_date": "2025-08-20",
+      "end_date": "2026-01-06",
+      "start_price": 76.8,
+      "end_price": 123.0,
+      "rise_pct": 0.6016,
+      "duration_days": 93
+    },
+    {
+      "symbol": "8027.TWO",
+      "start_date": "2025-11-21",
+      "end_date": "2026-02-05",
+      "start_price": 83.2,
+      "end_price": 119.0,
+      "rise_pct": 0.4303,
+      "duration_days": 52
+    },
+    {
+      "symbol": "8042.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-15",
+      "start_price": 28.05,
+      "end_price": 76.5,
+      "rise_pct": 1.7273,
+      "duration_days": 141
+    },
+    {
+      "symbol": "8042.TWO",
+      "start_date": "2025-11-10",
+      "end_date": "2025-12-04",
+      "start_price": 38.6,
+      "end_price": 63.6,
+      "rise_pct": 0.6477,
+      "duration_days": 18
+    },
+    {
+      "symbol": "8043.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-15",
+      "start_price": 21.22,
+      "end_price": 108.5,
+      "rise_pct": 4.1139,
+      "duration_days": 141
+    },
+    {
+      "symbol": "8047.TWO",
+      "start_date": "2025-09-04",
+      "end_date": "2025-12-24",
+      "start_price": 12.8,
+      "end_price": 60.8,
+      "rise_pct": 3.75,
+      "duration_days": 75
+    },
+    {
+      "symbol": "8048.TWO",
+      "start_date": "2025-07-11",
+      "end_date": "2026-03-03",
+      "start_price": 37.0,
+      "end_price": 72.7,
+      "rise_pct": 0.9649,
+      "duration_days": 152
+    },
+    {
+      "symbol": "8048.TWO",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-24",
+      "start_price": 42.95,
+      "end_price": 68.0,
+      "rise_pct": 0.5832,
+      "duration_days": 13
+    },
+    {
+      "symbol": "8064.TWO",
+      "start_date": "2025-06-02",
+      "end_date": "2026-01-16",
+      "start_price": 34.51,
+      "end_price": 60.9,
+      "rise_pct": 0.7645,
+      "duration_days": 157
+    },
+    {
+      "symbol": "8074.TWO",
+      "start_date": "2025-06-26",
+      "end_date": "2026-01-22",
+      "start_price": 19.8,
+      "end_price": 76.8,
+      "rise_pct": 2.8788,
+      "duration_days": 143
+    },
+    {
+      "symbol": "8074.TWO",
+      "start_date": "2025-11-05",
+      "end_date": "2026-03-03",
+      "start_price": 26.6,
+      "end_price": 74.0,
+      "rise_pct": 1.782,
+      "duration_days": 74
+    },
+    {
+      "symbol": "8086.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-03-12",
+      "start_price": 71.75,
+      "end_price": 142.5,
+      "rise_pct": 0.9861,
+      "duration_days": 173
+    },
+    {
+      "symbol": "8086.TWO",
+      "start_date": "2025-11-24",
+      "end_date": "2026-01-22",
+      "start_price": 93.0,
+      "end_price": 132.0,
+      "rise_pct": 0.4194,
+      "duration_days": 41
+    },
+    {
+      "symbol": "8091.TWO",
+      "start_date": "2025-08-20",
+      "end_date": "2026-02-26",
+      "start_price": 99.5,
+      "end_price": 150.0,
+      "rise_pct": 0.5075,
+      "duration_days": 123
+    },
+    {
       "symbol": "8096.TWO",
       "start_date": "2025-09-02",
       "end_date": "2026-02-02",
@@ -2017,6 +4528,42 @@
       "end_price": 77.7,
       "rise_pct": 1.0943,
       "duration_days": 103
+    },
+    {
+      "symbol": "8109.TWO",
+      "start_date": "2025-06-27",
+      "end_date": "2025-09-11",
+      "start_price": 77.3,
+      "end_price": 112.26,
+      "rise_pct": 0.4524,
+      "duration_days": 53
+    },
+    {
+      "symbol": "8109.TWO",
+      "start_date": "2025-08-11",
+      "end_date": "2026-01-26",
+      "start_price": 78.73,
+      "end_price": 110.83,
+      "rise_pct": 0.4078,
+      "duration_days": 114
+    },
+    {
+      "symbol": "8111.TWO",
+      "start_date": "2025-07-08",
+      "end_date": "2025-12-04",
+      "start_price": 46.25,
+      "end_price": 81.7,
+      "rise_pct": 0.7665,
+      "duration_days": 102
+    },
+    {
+      "symbol": "8111.TWO",
+      "start_date": "2025-10-13",
+      "end_date": "2026-03-03",
+      "start_price": 50.7,
+      "end_price": 74.3,
+      "rise_pct": 0.4655,
+      "duration_days": 90
     },
     {
       "symbol": "8155.TWO",
@@ -2055,22 +4602,31 @@
       "duration_days": 49
     },
     {
-      "symbol": "8299.TWO",
-      "start_date": "2025-07-08",
-      "end_date": "2026-01-30",
-      "start_price": 460.44,
-      "end_price": 2465.0,
-      "rise_pct": 4.3536,
-      "duration_days": 141
+      "symbol": "8240.TWO",
+      "start_date": "2025-06-23",
+      "end_date": "2026-01-14",
+      "start_price": 28.24,
+      "end_price": 48.0,
+      "rise_pct": 0.6996,
+      "duration_days": 140
     },
     {
-      "symbol": "8299.TWO",
-      "start_date": "2025-08-20",
-      "end_date": "2025-11-13",
-      "start_price": 463.42,
-      "end_price": 1382.3,
-      "rise_pct": 1.9828,
-      "duration_days": 57
+      "symbol": "8358.TWO",
+      "start_date": "2025-10-15",
+      "end_date": "2026-02-25",
+      "start_price": 199.5,
+      "end_price": 318.5,
+      "rise_pct": 0.5965,
+      "duration_days": 85
+    },
+    {
+      "symbol": "8358.TWO",
+      "start_date": "2025-11-19",
+      "end_date": "2026-01-02",
+      "start_price": 211.0,
+      "end_price": 304.0,
+      "rise_pct": 0.4408,
+      "duration_days": 30
     },
     {
       "symbol": "9949.TWO",
