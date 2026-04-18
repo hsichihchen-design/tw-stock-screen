@@ -104,7 +104,7 @@ if symbol_list:
             df['MA60'] = df['Close'].rolling(window=60).mean()
             
             # 切片
-            plot_df = df.loc[df.index >= (end_date - timedelta(days=120))]
+            plot_df = df.loc[df.index >= (end_date - timedelta(days=180))]
             
             if not plot_df.empty:
                 # 建立子圖
