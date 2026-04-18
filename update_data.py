@@ -95,7 +95,7 @@ def check_ma_trend(df):
         return False
         
     # 抓取特定交易日的「最低價」
-    current_low = float(df['Low'].iloc[-30:-1])              # 最新 K 棒最低價 (當前)
+    current_low = float(df['Low'].iloc[-1])              # 最新 K 棒最低價 (當前)
     low_60_ago = float(df['Low'].iloc[-60])              # 60 個交易日前 K 棒最低價 (約一季前)
     
     # 抓取特定「歷史區間」的絕對最低價
