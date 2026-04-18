@@ -85,7 +85,27 @@ def safe_batch_download(tickers, start_date, end_date, batch_size=50):
     return all_data
 
 def check_ma_trend(df):
-    """【宏觀趨勢濾網】近半年內，是否有 >= 85% 的交易日滿足 MA10 > MA60 且 MA20 > MA60"""
+    """【宏觀趨勢濾網】多頭排列比例 + 價格階梯式上漲條件"""
+    
+    # ==========================================
+    # 條件 1：價格階梯保護機制 (底底高)
+    # ==========================================
+    # 防呆：確認這檔股票上市時間夠長，至少有 120 個交易日，否則無法比較
+    if len(df) < 120: 
+        return False
+        
+    # 抓取特定交易日的收盤價 (使用 iloc 由後往前推算)
+    current_price = float(df['Close'].iloc[-1])     # 最新收盤價
+    price_60_ago = float(df['Close'].iloc[-60])     # 60 個交易日前收盤價 (約一季)
+    price_120_ago = float(df['Close'].iloc[-120])   # 120 個交易日前收盤價 (約半年)
+    
+    # 判斷：當前價格不能低於60天前，且60天前不能低於120天前
+    if not ((current_price >= price_60_ago) and (price_60_ago >= price_120_ago)):
+        return False
+
+    # ==========================================
+    # 條件 2：均線多頭排列比例
+    # ==========================================
     temp_df = pd.DataFrame(index=df.index)
     temp_df['Close'] = df['Close']
     
@@ -102,7 +122,8 @@ def check_ma_trend(df):
     valid_days = ((recent_df['MA10'] > recent_df['MA60']) & (recent_df['MA20'] > recent_df['MA60'])).sum()
     ratio = valid_days / len(recent_df)
     
-    return ratio >= 0.77
+    # 將比例標準放寬至 0.4
+    return ratio >= 0.4
 
 def identify_uptrend(df, symbol):
     """【微觀波段識別演算法】"""
