@@ -95,7 +95,7 @@ def check_ma_trend(df):
         return False
         
     # 抓取特定交易日的「最低價」
-    current_low = float(df['Low'].iloc[-1])              # 最新 K 棒最低價 (當前)
+    current_low = float(df['Low'].iloc[-30:-1])              # 最新 K 棒最低價 (當前)
     low_60_ago = float(df['Low'].iloc[-60])              # 60 個交易日前 K 棒最低價 (約一季前)
     
     # 抓取特定「歷史區間」的絕對最低價
@@ -236,9 +236,9 @@ def main():
                 continue
                 
             # 【第 1 關】：宏觀趨勢過濾
-            if not check_ma_trend(clean_df):
-                filtered_out_by_ma += 1
-                continue
+            #if not check_ma_trend(clean_df):
+            #    filtered_out_by_ma += 1
+            #    continue
                 
             # 【第 2 關】：微觀波段識別
             segments = identify_uptrend(clean_df, symbol)
