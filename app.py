@@ -20,6 +20,27 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+
+st.markdown("""
+    <style>
+    /* 1. 強制整個網頁的底層背景為純白 */
+    .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+        background-color: #ffffff !important;
+    }
+    
+    /* 2. 強制網頁內所有的文字為純黑、加粗 */
+    .stApp * {
+        color: #000000 !important;
+        font-family: "Arial", sans-serif !important;
+    }
+      
+    /* 4. 隱藏側邊欄與縮減頂部邊距 */
+    [data-testid="stSidebar"] { display: none; }
+    .block-container { padding-top: 1rem; padding-bottom: 0rem; }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 # ==========================================
 # 1. 先定義載入資料的函數
 # ==========================================
