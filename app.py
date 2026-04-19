@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 # ==========================================
 # 頁面與底色初始化
 # ==========================================
-st.set_page_config(page_title="台股型態瀏覽器", layout="wide")
+st.set_page_config(page_title="台股掃圖", layout="wide")
 
 # 強制設定 Streamlit 區塊為極致白底
 st.markdown("""
@@ -48,7 +48,7 @@ last_updated = data_store.get('last_updated', '未知')
 col_title, col_time = st.columns([3, 1])
 
 with col_title:
-    st.title("📈 台股近半年線圖")
+    st.title("📈 台股掃圖(近半年)")
 
 with col_time:
     st.markdown(f"""
