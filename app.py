@@ -47,15 +47,12 @@ last_updated = data_store.get('last_updated', '未知')
 # 建立兩欄：第一欄寬度大，放標題；第二欄寬度小，放更新時間
 col_title, col_time = st.columns([3, 1])
 
-with col_title:
-    st.title("📈 台股掃圖(近半年)")
-
-with col_time:
-    st.markdown(f"""
-        <div style="text-align: right; padding-top: 25px; color: #555555; font-size: 0.9rem;">
-            <b>最後更新時間</b><br>{last_updated}
-        </div>
-        """, unsafe_allow_html=True)
+# 標題欄位
+col_t1, col_t2 = st.columns([3, 1])
+with col_t1: 
+    st.markdown("<h1 style='color: #000000; font-size: 2.2rem; font-weight: 900;'>台股掃圖</h1>", unsafe_allow_html=True)
+with col_t2: 
+    st.markdown(f"<div style='text-align:right; color:#000000; padding-top:20px; font-weight:800;'>最後更新<br>{last_updated}</div>", unsafe_allow_html=True)
 
 # ==========================================
 # 4. 資料過濾與排序
