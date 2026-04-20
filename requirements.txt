@@ -6,3 +6,4 @@ plotly
 requests
 lxml
 html5lib
+kaleido==0.1.0.post1
