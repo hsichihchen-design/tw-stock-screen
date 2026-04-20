@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 # 參數設定
 # ==========================================
 YEARS = 0.65
-MIN_RISE_PCT = 0.3      # 波段最小漲幅 35%
+MIN_RISE_PCT = 0.3       # 波段最小漲幅 30%
 MIN_DURATION = 5         # 最少持續 5 天
 LOOKBACK_PERIOD = 15     # 找尋局部高低點的視窗大小
 MAX_STOCKS = None        # None 代表跑全市場
@@ -86,45 +86,24 @@ def safe_batch_download(tickers, start_date, end_date, batch_size=50):
 
 def check_ma_trend(df):
     """【宏觀趨勢濾網】多頭排列 + 底部墊高 + 季線控管 + 強勢突破"""
-    
-    # 防呆：確認這檔股票上市時間夠長，至少有 120 個交易日
     if len(df) < 120: 
         return False
 
-    # ==========================================
-    # 條件 1：最新 K 棒強勢突破 (脫離前一個月天花板 10%)
-    # ==========================================
-    # 取得最新的最低點
     latest_low = float(df['Low'].iloc[-1])
-    
-    # 取得第 120 根到第 90 根（最久遠的那 30 根）的最高點
-    # iloc[-120:-90] 代表半年前的那一個月區間
     old_zone_high = float(df['High'].iloc[-120:-90].max())
     
-    # 判斷：今天最低價必須完全站上（大於）半年前的最高壓
     if latest_low <= old_zone_high:
         return False
 
-    # ==========================================
-    # 條件 2：區間底部支撐墊高保護機制 (箱型底底高)
-    # ==========================================
-    # 👈 這裡一併修復了上一版的 Bug，改用 .min() 抓出近 30 天的絕對最低點
     current_zone_low = float(df['Low'].iloc[-30:].min())              
     low_60_ago = float(df['Low'].iloc[-60])              
     
-    # 抓取特定「歷史區間」的絕對最低價
     zone_60_to_90_min = float(df['Low'].iloc[-90:-60].min())
     zone_120_to_90_min = float(df['Low'].iloc[-120:-90].min())
     
     cond_A = current_zone_low >= zone_60_to_90_min
     cond_B = low_60_ago >= zone_120_to_90_min
 
-    #if not (cond_A and cond_B):
-    #    return False
-
-    # ==========================================
-    # 準備均線與近期資料 (半年內)
-    # ==========================================
     temp_df = pd.DataFrame(index=df.index)
     temp_df['Close'] = df['Close']
     temp_df['Low'] = df['Low']  
@@ -136,17 +115,11 @@ def check_ma_trend(df):
     half_year_ago = datetime.now() - timedelta(days=180)
     recent_df = temp_df[temp_df.index >= half_year_ago].dropna()
     
-    # ==========================================
-    # 條件 3：跌破季線 (MA60) 的容忍度控管
-    # ==========================================
     if len(recent_df) > 0:
         days_below_ma60 = (recent_df['Low'] < recent_df['MA60']).sum()
         if days_below_ma60 > 60:
             return False  
         
-    # ==========================================
-    # 條件 4：均線多頭排列比例
-    # ==========================================
     if len(recent_df) < 60: 
         return False
         
@@ -222,15 +195,14 @@ def main():
     
     data_dict = safe_batch_download(tickers, start_date, end_date, batch_size=BATCH_SIZE)
     
-    all_results = []
+    final_payload = {} # 用來存放包含 K 線數據的最終結果
     failed_count = 0
     filtered_out_by_ma = 0
-    filtered_out_by_timing = 0  # 紀錄因時間條件被淘汰的數量
+    filtered_out_by_timing = 0
     
-    # 計算兩個月前（60天前）的基準日期
     two_months_ago = datetime.now() - timedelta(days=5)
     
-    print("\n開始執行三重過濾 (宏觀均線 + 微觀波段 + 沉澱期濾網)...")
+    print("\n開始執行三重過濾並打包繪圖數據...")
     for symbol in tickers:
         try:
             if symbol not in data_dict:
@@ -245,21 +217,27 @@ def main():
             if len(clean_df) == 0:
                 continue
                 
-            # 【第 1 關】：宏觀趨勢過濾
             if not check_ma_trend(clean_df):
                 filtered_out_by_ma += 1
                 continue
                 
-            # 【第 2 關】：微觀波段識別
             segments = identify_uptrend(clean_df, symbol)
             if segments:
-                # 【第 3 關】：時間濾網 (判斷是否至少有一個波段的結束日是在 60 天之前)
                 has_old_uptrend = any(datetime.strptime(seg['end_date'], '%Y-%m-%d') <= two_months_ago for seg in segments)
                 
                 if has_old_uptrend:
-                    all_results.extend(segments)
+                    # 【核心修改】：將最近 120 根 K 線打包
+                    plot_df = clean_df.tail(120).copy()
+                    k_data = {
+                        'date': plot_df.index.strftime('%m-%d').tolist(),
+                        'open': [round(float(x), 2) for x in plot_df['Open']],
+                        'high': [round(float(x), 2) for x in plot_df['High']],
+                        'low': [round(float(x), 2) for x in plot_df['Low']],
+                        'close': [round(float(x), 2) for x in plot_df['Close']],
+                        'volume': [int(x) for x in plot_df['Volume']]
+                    }
+                    final_payload[symbol] = k_data
                 else:
-                    # 如果所有波段都發生在最近 60 天內，則淘汰
                     filtered_out_by_timing += 1
                 
         except Exception as e:
@@ -268,9 +246,9 @@ def main():
             
     tw_time = datetime.utcnow() + timedelta(hours=8)
     output = {
-        'last_updated': tw_time.strftime('%Y-%m-%d %H:%M:%S'), # 👈 確保這裡是寫入 tw_time
-        'total_segments_found': len(all_results),
-        'results': all_results
+        'last_updated': tw_time.strftime('%Y-%m-%d %H:%M:%S'),
+        'total_symbols_found': len(final_payload),
+        'results': final_payload # 改為輸出帶有 K 線資料的字典
     }
     
     with open('uptrend_results.json', 'w', encoding='utf-8') as f:
@@ -280,7 +258,7 @@ def main():
     print(f"📊 淘汰報告：")
     print(f"   - {filtered_out_by_ma} 檔因【均線未達多頭標準】被淘汰。")
     print(f"   - {filtered_out_by_timing} 檔因【大漲發生在近兩個月內 (籌碼未沉澱)】被淘汰。")
-    print(f"🎯 最終找到 {len(set([r['symbol'] for r in all_results]))} 檔強勢沉澱股，已存入 uptrend_results.json")
+    print(f"🎯 最終找到 {len(final_payload)} 檔強勢沉澱股，連同 120 日 K 線已打包進 uptrend_results.json")
     if failed_count > 0:
         print(f"⚠️ 有 {failed_count} 檔股票在計算時發生例外狀況被跳過。")
 
