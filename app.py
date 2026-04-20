@@ -72,9 +72,29 @@ if not symbol_list:
     st.stop()
 
 # ==========================================
-# 4. 繪圖渲染 (雙欄極致看板模式)
+# 4. 分頁設定 (拯救瀏覽器記憶體的關鍵)
 # ==========================================
-for i, sym in enumerate(symbol_list):
+# 設定一頁顯示幾檔股票 (建議 10~20)
+ITEMS_PER_PAGE = 10 
+total_pages = (len(symbol_list) - 1) // ITEMS_PER_PAGE + 1
+
+# 在畫面上方加入頁碼選擇器
+cols_page = st.columns([1, 3])
+with cols_page[0]:
+    current_page = st.number_input(f"選擇頁碼 (共 {total_pages} 頁)", min_value=1, max_value=total_pages, step=1)
+
+st.markdown("<hr style='margin-top: 5px; margin-bottom: 20px;'>", unsafe_allow_html=True)
+
+# 計算這一頁要抓取哪些股票
+start_idx = (current_page - 1) * ITEMS_PER_PAGE
+end_idx = start_idx + ITEMS_PER_PAGE
+current_symbols = symbol_list[start_idx:end_idx]
+
+# ==========================================
+# 5. 繪圖渲染 (雙欄極致看板模式)
+# ==========================================
+# 注意：這裡改用 current_symbols 來跑迴圈
+for i, sym in enumerate(current_symbols):
     try:
         # 從 JSON 中還原 DataFrame
         k_data = all_results[sym]
@@ -83,7 +103,7 @@ for i, sym in enumerate(symbol_list):
         if plot_df.empty:
             continue
 
-        # 計算均線 (為節省 JSON 容量，均線由前端即時計算)
+        # 計算均線
         plot_df['MA10'] = plot_df['close'].rolling(window=10).mean()
         plot_df['MA20'] = plot_df['close'].rolling(window=20).mean()
         plot_df['MA60'] = plot_df['close'].rolling(window=60).mean()
@@ -92,7 +112,7 @@ for i, sym in enumerate(symbol_list):
         fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                             row_heights=[0.8, 0.2], vertical_spacing=0.03)
         
-        # 1. K線 (對應 JSON 中小寫的欄位名稱)
+        # 1. K線
         fig.add_trace(go.Candlestick(
             x=plot_df['date'], open=plot_df['open'], high=plot_df['high'], 
             low=plot_df['low'], close=plot_df['close'],
@@ -141,13 +161,17 @@ for i, sym in enumerate(symbol_list):
             cols = st.columns(2)
         
         with cols[i % 2]:
-            # 💡 核心修改：將 Plotly 圖表轉為高畫質靜態 PNG
-            # width 和 height 控制圖片的基礎比例
-            # scale=2 代表解析度放大兩倍 (畫質提升)。如果覺得還是不夠清晰，可以改為 scale=3
-            image_bytes = fig.to_image(format="png", width=800, height=450, scale=2)
-            
-            # 使用 Streamlit 的 image 函數來渲染靜態圖片
-            st.image(image_bytes, use_column_width=True)
+            # 💡 退回使用 plotly_chart，但因為有了分頁，不再會造成當機！
+            st.plotly_chart(
+                fig, 
+                use_container_width=True, 
+                key=f"fig_{sym}", 
+                theme=None, 
+                config={
+                    'staticPlot': True,  # 保持靜態模式，提升效能
+                    'displayModeBar': False
+                }
+            )
             st.markdown("<br>", unsafe_allow_html=True)
             
     except Exception as e:
@@ -155,4 +179,4 @@ for i, sym in enumerate(symbol_list):
         continue
 
 st.write("---")
-st.write("已經到底囉！")
+st.write(f"第 {current_page} 頁顯示完畢！")
