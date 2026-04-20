@@ -141,21 +141,13 @@ for i, sym in enumerate(symbol_list):
             cols = st.columns(2)
         
         with cols[i % 2]:
-            st.plotly_chart(
-                fig, 
-                use_container_width=True, 
-                key=f"fig_{sym}", 
-                theme=None, 
-                config={
-                    'toImageButtonOptions': {
-                        'format': 'png',
-                        'filename': f'{sym}_Analysis',
-                        'scale': 2
-                    },
-                    'staticPlot': True,
-                    'displayModeBar': False
-                }
-            )
+            # 💡 核心修改：將 Plotly 圖表轉為高畫質靜態 PNG
+            # width 和 height 控制圖片的基礎比例
+            # scale=2 代表解析度放大兩倍 (畫質提升)。如果覺得還是不夠清晰，可以改為 scale=3
+            image_bytes = fig.to_image(format="png", width=800, height=450, scale=2)
+            
+            # 使用 Streamlit 的 image 函數來渲染靜態圖片
+            st.image(image_bytes, use_column_width=True)
             st.markdown("<br>", unsafe_allow_html=True)
             
     except Exception as e:
