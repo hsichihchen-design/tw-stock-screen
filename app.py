@@ -74,7 +74,7 @@ if not symbol_list:
 # ==========================================
 # 4. 分頁設定 (含上下同步功能)
 # ==========================================
-ITEMS_PER_PAGE = 10 
+ITEMS_PER_PAGE = 30
 total_pages = max(1, (len(symbol_list) - 1) // ITEMS_PER_PAGE + 1)
 
 # 初始化 session_state (讓 Streamlit 記住現在是哪一頁)
