@@ -3,7 +3,7 @@ name: Daily Taiwan Stock Screen
 on:
   schedule:
     # 每天台灣時間 16:30 執行 (UTC 08:30)
-    - cron: '30 8 * * *'
+    - cron: '40 5 * * *'
   workflow_dispatch: # 允許你手動點擊執行
 
 jobs:
