@@ -74,7 +74,7 @@ if not symbol_list:
 # ==========================================
 # 4. 分頁設定 (完美上下同步版)
 # ==========================================
-ITEMS_PER_PAGE = 10 
+ITEMS_PER_PAGE = 40
 total_pages = max(1, (len(symbol_list) - 1) // ITEMS_PER_PAGE + 1)
 
 # 初始化頂部與底部的 session_state
