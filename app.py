@@ -72,20 +72,23 @@ if not symbol_list:
     st.stop()
 
 # ==========================================
-# 4. 分頁設定 (含上下同步功能)
+# 4. 分頁設定 (完美上下同步版)
 # ==========================================
-ITEMS_PER_PAGE = 30
+ITEMS_PER_PAGE = 10 
 total_pages = max(1, (len(symbol_list) - 1) // ITEMS_PER_PAGE + 1)
 
-# 初始化 session_state (讓 Streamlit 記住現在是哪一頁)
-if 'current_page' not in st.session_state:
-    st.session_state.current_page = 1
+# 初始化頂部與底部的 session_state
+if 'top_page' not in st.session_state:
+    st.session_state.top_page = 1
+if 'bottom_page' not in st.session_state:
+    st.session_state.bottom_page = 1
 
-# 定義同步函數：當頂部或底部數值改變時，互相更新
-def update_from_top():
-    st.session_state.current_page = st.session_state.top_page
-def update_from_bottom():
-    st.session_state.current_page = st.session_state.bottom_page
+# 定義同步函數：改動其中一個時，直接強制覆寫另一個的值
+def sync_from_top():
+    st.session_state.bottom_page = st.session_state.top_page
+
+def sync_from_bottom():
+    st.session_state.top_page = st.session_state.bottom_page
 
 # --- 頂部換頁器 ---
 cols_page_top = st.columns([1, 3])
@@ -93,15 +96,15 @@ with cols_page_top[0]:
     st.number_input(
         f"選擇頁碼 (共 {total_pages} 頁)", 
         min_value=1, max_value=total_pages, step=1,
-        value=st.session_state.current_page,
-        key="top_page",
-        on_change=update_from_top
+        key="top_page",               # 綁定頂部狀態
+        on_change=sync_from_top       # 改變時去更新底部狀態
     )
 
 st.markdown("<hr style='margin-top: 5px; margin-bottom: 20px;'>", unsafe_allow_html=True)
 
-# 計算這一頁要抓取哪些股票
-start_idx = (st.session_state.current_page - 1) * ITEMS_PER_PAGE
+# 計算這一頁要抓取哪些股票 (直接以 top_page 為準，因為兩邊現在永遠同步)
+current_page = st.session_state.top_page
+start_idx = (current_page - 1) * ITEMS_PER_PAGE
 end_idx = start_idx + ITEMS_PER_PAGE
 current_symbols = symbol_list[start_idx:end_idx]
 
@@ -167,7 +170,6 @@ with cols_page_bottom[0]:
     st.number_input(
         f"跳轉頁碼 (共 {total_pages} 頁)", 
         min_value=1, max_value=total_pages, step=1,
-        value=st.session_state.current_page,
-        key="bottom_page",
-        on_change=update_from_bottom
+        key="bottom_page",            # 綁定底部狀態
+        on_change=sync_from_bottom    # 改變時去更新頂部狀態
     )
