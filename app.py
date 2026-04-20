@@ -29,7 +29,7 @@ st.markdown("""
       
     /* 4. 隱藏側邊欄與縮減頂部邊距 */
     [data-testid="stSidebar"] { display: none; }
-    .block-container { padding-top: 1rem; padding-bottom: 5rem; }
+    .block-container { padding-top: 1rem; padding-bottom: 3rem; }
     </style>
     """, unsafe_allow_html=True)
 
