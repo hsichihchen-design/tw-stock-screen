@@ -227,7 +227,7 @@ def main():
                 
                 if has_old_uptrend:
                     # 【核心修改】：將最近 120 根 K 線打包
-                    plot_df = clean_df.tail(200).copy()
+                    plot_df = clean_df.tail(360).copy()
                     k_data = {
                         'date': plot_df.index.strftime('%m-%d').tolist(),
                         'open': [round(float(x), 2) for x in plot_df['Open']],
